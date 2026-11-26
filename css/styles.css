@@ -112,7 +112,7 @@ section { padding: 76px 0; }
 
 /* ---------- People ---------- */
 .person { text-align: center; }
-.avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); font-weight: 800; font-size: 1.2rem; display: grid; place-items: center; margin: 0 auto 14px; border: 2px solid #fff; box-shadow: 0 0 0 1.5px var(--line); }
+.avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--teal-tint); color: var(--teal-dark); font-weight: 800; font-size: 1.2rem; display: grid; place-items: center; margin: 0 auto 24px; border: 2px solid #fff; box-shadow: 0 0 0 1.5px var(--line); }
 .person h3 { font-size: 1rem; margin: 0; }
 
 /* ---------- Steps ---------- */
