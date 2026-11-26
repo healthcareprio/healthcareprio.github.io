@@ -30,19 +30,8 @@
         </p>
       </div>
 
-      <!-- Hero photo: save a photo as assets/images/hero.jpg and it appears here automatically.
-           Until then, the illustrated card below is shown instead. -->
-      <div class="hero-media" id="hero-media">
-        <div class="hero-frame">
-        <img class="hero-photo" id="hero-photo" src="assets/images/hero.jpg" alt="A health worker in a mask and protective clothing holding a patient's hand">
-        <div class="hero-art" aria-hidden="true">
-          <svg viewBox="0 0 400 70" width="100%" fill="none" stroke="#0f7f8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M0 40h120l20-30 28 60 24-45 14 15h194"/></svg>
-          <div class="queue-row"><span class="dot" style="background:#d65a4a"></span>Patient A<span class="bar"><em style="width:92%;background:#d65a4a"></em></span><i>Priority 1</i></div>
-          <div class="queue-row"><span class="dot" style="background:#e29a2e"></span>Patient B<span class="bar"><em style="width:70%;background:#e29a2e"></em></span><i>Priority 2</i></div>
-          <div class="queue-row"><span class="dot" style="background:#3c9a5f"></span>Patient C<span class="bar"><em style="width:44%;background:#3c9a5f"></em></span><i>Priority 3</i></div>
-          <div class="queue-row"><span class="dot" style="background:#2f6db5"></span>Patient D<span class="bar"><em style="width:26%;background:#2f6db5"></em></span><i>Priority 4</i></div>
-        </div>
-        </div>
+      <div class="hero-media">
+        <img class="hero-photo" src="assets/images/hero.jpg" alt="A health worker in a mask and protective clothing holding a patient's hand">
       </div>
     </div>
   </section>
@@ -111,7 +100,7 @@
       <div class="sec-head">
         <div class="eyebrow">About us</div>
         <h2>Meet the Team</h2>
-        <p>The five of us behind this project.</p>
+        <p>The people behind this project.</p>
       </div>
       <div class="grid g5" id="team"></div>
     </div>
@@ -133,13 +122,6 @@
   document.getElementById("team").innerHTML = TEAM.map(function (name) {
     return '<div class="card person"><div class="avatar" aria-hidden="true">' + initials(name) + "</div><h3>" + esc(name) + "</h3></div>";
   }).join("");
-
-  /* Show the hero photo only if assets/images/hero.jpg exists. */
-  (function () {
-    var img = document.getElementById("hero-photo");
-    var show = function () { document.getElementById("hero-media").classList.add("has-photo"); };
-    if (img.complete && img.naturalWidth > 0) { show(); } else { img.addEventListener("load", show); }
-  })();
 </script>
 </body>
 </html>
