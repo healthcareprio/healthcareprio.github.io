@@ -18,7 +18,6 @@ This is the final project for IS 201 Computer Ethics. It is a four-page website 
 | Languages     | HTML, CSS, and plain JavaScript    | The course requires them                                                           |
 | Build step    | None                               | The course does not allow frameworks that need one, such as React, Vue, or Next.js |
 | Database      | None                               | The site is static and runs on GitHub Pages                                        |
-| Node.js       | Not required                       | There is nothing to install or compile                                             |
 | Table content | Markdown files in `assets/tables/` | Teammates can edit tables without touching the HTML                                |
 | Hosting       | GitHub Pages                       | The course requires a public repository and a Pages link                           |
 
