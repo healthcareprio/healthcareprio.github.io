@@ -1,4 +1,4 @@
-﻿/* Shared site chrome: navbar, footer, and team data.
+/* Shared site chrome: navbar, footer, and team data.
    This is a classic script (no modules). To rename the site or edit the
    team list, change the constants below. */
 

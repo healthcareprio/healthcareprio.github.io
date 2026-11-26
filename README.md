@@ -1,4 +1,4 @@
-﻿# Healthcare Prioritization Simulator
+# Healthcare Prioritization Simulator
 
 This is the final project for IS 201 Computer Ethics. It is a four-page website where visitors change decisions about prioritizing patients in a public hospital. A rule-based model then shows the consequences for equity, governance, and sustainability.
 

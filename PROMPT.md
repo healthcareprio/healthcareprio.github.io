@@ -1,4 +1,4 @@
-﻿# Build prompt: Healthcare Prioritization Simulator website
+# Build prompt: Healthcare Prioritization Simulator website
 
 This is the prompt written for an AI coding assistant (such as Claude Code) to build the front end of our final project. It is kept in the repository for transparency about AI use. It has been revised to match the current state of the site.
 

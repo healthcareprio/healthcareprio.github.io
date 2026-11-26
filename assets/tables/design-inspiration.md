@@ -4,3 +4,4 @@
 | [Mayo Clinic](https://www.mayoclinic.org/)                                   | A calm, trust-focused layout with generous whitespace. |
 | [Cleveland Clinic](https://my.clevelandclinic.org/)                          | Card-based navigation and strong typography.           |
 | [Figtree typeface (Google Fonts)](https://fonts.google.com/specimen/Figtree) | The sans-serif typeface used across the site.          |
+| Home hero photo                                                              | _Photographer and source to be added_                  |
