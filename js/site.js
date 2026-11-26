@@ -18,7 +18,7 @@ var TEAM = [
 ];
 
 var NAV = [
-  { href: "index.html", label: "Home", id: "home" },
+  { href: "./", label: "Home", id: "home" },
   { href: "simulator.html", label: "Simulator", id: "simulator" },
   { href: "how-it-works.html", label: "How the Model Works", id: "model" },
   { href: "references.html", label: "References", id: "references" }
@@ -52,14 +52,14 @@ function esc(s) {
 
   var header =
     '<a class="skip" href="#main">Skip to content</a>' +
-    '<header class="site-header"><div class="wrap">' + brand("index.html") +
+    '<header class="site-header"><div class="wrap">' + brand("./") +
     '<button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu">' +
     '<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>' +
     '<nav class="nav" id="nav" aria-label="Main">' + navLinks + "</nav></div></header>";
 
   var footer =
     '<footer class="site-footer"><div class="wrap"><div class="cols">' +
-    "<div>" + brand("index.html") +
+    "<div>" + brand("./") +
     "<p>This site is an educational simulation. It illustrates ethical trade-offs and does not replace medical advice.</p></div>" +
     "<div><h4>Explore</h4><ul>" + NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") + "</ul></div>" +
     "<div><h4>The Team</h4><ul>" + TEAM.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" +
