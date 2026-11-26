@@ -16,11 +16,12 @@
     prev = null;
   }
 
-  /* Formats an effects map as colored "Consequence A +10, ..." text. */
+  /* Formats an effects map as a list with one colored line per indicator:
+     "Consequence A +10", "Consequence B -5", ... */
   function effectText(effects) {
-    return Object.keys(effects).filter(function (k) { return effects[k]; }).map(function (k) {
-      return esc(indicator(k).label) + ' <span class="' + (effects[k] > 0 ? "pos" : "neg") + '">' + signed(effects[k]) + "</span>";
-    }).join(", ");
+    return '<ul class="effect-list">' + Object.keys(effects).filter(function (k) { return effects[k]; }).map(function (k) {
+      return "<li>" + esc(indicator(k).label) + ' <span class="' + (effects[k] > 0 ? "pos" : "neg") + '">' + signed(effects[k]) + "</span></li>";
+    }).join("") + "</ul>";
   }
 
   /* Pure function: state in, scores and explanation rows out. */
@@ -42,7 +43,7 @@
       Object.keys(ix.effects).forEach(function (k) { scores[k] += ix.effects[k]; });
       fired.push({
         cause: '<span class="ix-tag">Interaction ' + (n + 1) + "</span>",
-        result: effectText(ix.effects) + "<br>" + esc(ix.why)
+        result: effectText(ix.effects) + '<p class="ix-why">' + esc(ix.why) + "</p>"
       });
     });
     why = fired.concat(why);
