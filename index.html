@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | Healthcare Prioritization Simulator</title>
+  <meta name="description" content="A rule-based simulator that shows the ethical trade-offs of prioritizing patients in a public hospital.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Patient prioritization in public hospitals</div>
+        <h1>Who gets care first, and what does it cost the rest?</h1>
+        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Explore how decisions about patient prioritization in a public hospital change fairness, accountability, and sustainability.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="simulator.html">Open the simulator</a>
+          <a class="btn btn-ghost" href="how-it-works.html">How the model works</a>
+        </div>
+        <p class="hero-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+          <span>This is an educational simulation. It does not replace medical advice.</span>
+        </p>
+      </div>
+
+      <!-- Hero photo: save a photo as assets/images/hero.jpg and it appears here automatically.
+           Until then, the illustrated card below is shown instead. -->
+      <div class="hero-media" id="hero-media">
+        <img class="hero-photo" id="hero-photo" src="assets/images/hero.jpg" alt="A nurse holding the hand of an elderly patient in a hospital room">
+        <div class="hero-art" aria-hidden="true">
+          <svg viewBox="0 0 400 70" width="100%" fill="none" stroke="#0f7f8c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M0 40h120l20-30 28 60 24-45 14 15h194"/></svg>
+          <div class="queue-row"><span class="dot" style="background:#d65a4a"></span>Patient A<span class="bar"><em style="width:92%;background:#d65a4a"></em></span><i>Priority 1</i></div>
+          <div class="queue-row"><span class="dot" style="background:#e29a2e"></span>Patient B<span class="bar"><em style="width:70%;background:#e29a2e"></em></span><i>Priority 2</i></div>
+          <div class="queue-row"><span class="dot" style="background:#3c9a5f"></span>Patient C<span class="bar"><em style="width:44%;background:#3c9a5f"></em></span><i>Priority 3</i></div>
+          <div class="queue-row"><span class="dot" style="background:#2f6db5"></span>Patient D<span class="bar"><em style="width:26%;background:#2f6db5"></em></span><i>Priority 4</i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Scenario overview</div>
+        <h2>Patient prioritization in a public hospital</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. The final scenario framing will be written once the group agrees on it.</p>
+      </div>
+      <div class="grid g3">
+        <div class="card">
+          <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <h3>Context</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+        </div>
+        <div class="card">
+          <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
+          <h3>Societal significance</h3>
+          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+        <div class="card">
+          <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M16 5a3.5 3.5 0 010 7M18 14c2 .6 3.3 2.6 3.5 6"/></svg></div>
+          <h3>Affected stakeholders</h3>
+          <p>Patients, clinicians, hospital administrators, and the community. Excepteur sint occaecat cupidatat non proident.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">How to use this site</div>
+        <h2>Three steps from decision to insight</h2>
+      </div>
+      <div class="grid g3">
+        <div class="card"><div class="step-n">1</div><h3>Set the decisions</h3><p>Choose an option for each policy decision in the simulator. Lorem ipsum dolor sit amet.</p></div>
+        <div class="card"><div class="step-n">2</div><h3>Read the consequences</h3><p>Watch the indicators update and see who gains, who loses, and which values are traded off.</p></div>
+        <div class="card"><div class="step-n">3</div><h3>Inspect the rules</h3><p>Open <a href="how-it-works.html">How the Model Works</a> to see every rule and the reasoning behind it.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Project video</div>
+        <h2>Watch the presentation and demo</h2>
+        <p>A 10 to 12 minute walkthrough of the scenario, the model, and a live demo, presented by the whole team.</p>
+      </div>
+      <!-- Replace this block with the YouTube embed:
+           <div class="video"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Project video" allowfullscreen></iframe></div> -->
+      <div class="video" role="img" aria-label="Video placeholder">
+        <div>
+          <div class="play"><svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M8 5v14l11-7z"/></svg></div>
+          <b>Video coming soon</b><br><span style="opacity:.7">YouTube embed placeholder</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">The team</div>
+        <h2>The team behind the application</h2>
+        <p>Meet the people who researched, designed, and built this simulator.</p>
+      </div>
+      <div class="grid g5" id="team"></div>
+    </div>
+  </section>
+
+  <section class="band-dark">
+    <div class="wrap" style="display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+      <div style="max-width:620px">
+        <h2 style="margin-bottom:.3em">See the trade-offs for yourself</h2>
+        <p style="margin:0;font-size:1.1rem">Set the decisions, watch the consequences change, and judge who gains and who loses.</p>
+      </div>
+      <a class="btn btn-light" href="simulator.html">Try the simulator</a>
+    </div>
+  </section>
+</main>
+
+<script src="js/site.js"></script>
+<script>
+  document.getElementById("team").innerHTML = TEAM.map(function (name) {
+    return '<div class="card person"><div class="avatar" aria-hidden="true">' + initials(name) + "</div><h3>" + esc(name) + "</h3></div>";
+  }).join("");
+
+  /* Show the hero photo only if assets/images/hero.jpg exists. */
+  (function () {
+    var img = document.getElementById("hero-photo");
+    var show = function () { document.getElementById("hero-media").classList.add("has-photo"); };
+    if (img.complete && img.naturalWidth > 0) { show(); } else { img.addEventListener("load", show); }
+  })();
+</script>
+</body>
+</html>

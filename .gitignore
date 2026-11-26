@@ -1,0 +1,22 @@
+# Environment and secrets
+.env
+.env.*
+*.pem
+*.key
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# draw.io backups and temp files
+*.drawio.bkp
+*.dtmp
+.$*.bkp
+.$*.dtmp
+
+# Logs and local tooling
+*.log
+node_modules/

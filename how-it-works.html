@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How the Model Works | Healthcare Prioritization Simulator</title>
+  <meta name="description" content="The rules, interactions, assumptions, and limitations behind the simulator.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="model">
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="crumbs">Home / How the Model Works</div>
+      <h1>How the model works</h1>
+      <p>Every score in the simulator comes from a fixed, visible rule, so any result can be traced back to the decisions that caused it.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Overview</div>
+        <h2>From decisions to consequences</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p>Each indicator starts at a baseline, rule effects are added, and the result is capped between 0 and 100.</p>
+      </div>
+      <figure class="diagram" style="margin:0">
+        <img src="assets/diagrams/decisions-to-consequences.svg" width="900" height="230" alt="Flow diagram: decisions feed main-effect rules and interaction rules, which update the indicators, which produce explanations.">
+        <figcaption class="placeholder" style="margin-top:10px;font-size:.9rem">Sample diagram. To edit it, open assets/diagrams/decisions-to-consequences.drawio in draw.io.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Indicators</div>
+        <h2>What each consequence measures</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+        <p>Indicators must cover equity, governance, and sustainability, plus other dimensions of our choice.</p>
+      </div>
+      <div data-table="assets/tables/indicators.md"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Rules</div>
+        <h2>Rules and their justification</h2>
+        <p>A rule is a fixed relationship:</p>
+        <ul class="rule-list">
+          <li><b>IF</b> a decision takes some value,</li>
+          <li><b>THEN</b> an indicator changes,</li>
+          <li><b>BECAUSE</b> of evidence or reasoning.</li>
+        </ul>
+        <p>Effects are points added to the baseline of 50.</p>
+      </div>
+      <div data-table="assets/tables/rules.md"></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="eyebrow">Interactions</div>
+        <h2>When decisions depend on each other</h2>
+        <p>An interaction changes an indicator only when two specific choices are made together. Each one uses a different pair of decisions.</p>
+      </div>
+      <div data-table="assets/tables/interactions.md"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid g2">
+        <div class="card">
+          <h3>Model-wide assumptions</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+          <ul><li>Placeholder assumption one</li><li>Placeholder assumption two</li><li>Placeholder assumption three</li></ul>
+        </div>
+        <div class="card">
+          <h3>Limitations</h3>
+          <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+          <ul><li>Perspectives the model may miss</li><li>Values that are hypothetical</li><li>What the model leaves out or simplifies</li></ul>
+        </div>
+      </div>
+      <p class="placeholder" style="margin-top:22px">The simulator illustrates ethical trade-offs. It does not predict real outcomes, and all numeric values are hypothetical.</p>
+    </div>
+  </section>
+</main>
+<script src="js/site.js"></script>
+<script src="js/tables.js"></script>
+</body>
+</html>

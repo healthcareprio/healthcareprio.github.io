@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="decisions-to-consequences" name="Decisions to consequences">
+    <mxGraphModel dx="900" dy="230" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="230" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="decisions" value="Decisions&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;5 user choices&lt;/font&gt;" style="rounded=1;arcSize=17;whiteSpace=wrap;html=1;fillColor=#E3F2F2;strokeColor=#0F7F8C;fontColor=#0B2540;fontStyle=1;fontSize=15;fontFamily=Figtree;" vertex="1" parent="1">
+          <mxGeometry x="10" y="75" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="main" value="Main-effect rules&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;IF option THEN indicator +/-&lt;/font&gt;" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9FB6C6;fontColor=#0B2540;fontStyle=1;fontSize=15;fontFamily=Figtree;" vertex="1" parent="1">
+          <mxGeometry x="250" y="20" width="190" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="interactions" value="Interaction rules&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;Only for specific pairs&lt;/font&gt;" style="rounded=1;arcSize=20;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#9FB6C6;fontColor=#0B2540;fontStyle=1;fontSize=15;fontFamily=Figtree;" vertex="1" parent="1">
+          <mxGeometry x="250" y="140" width="190" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="indicators" value="Indicators&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;5 scores, 0 to 100&lt;/font&gt;" style="rounded=1;arcSize=17;whiteSpace=wrap;html=1;fillColor=#E1EBF8;strokeColor=#2F6DB5;fontColor=#0B2540;fontStyle=1;fontSize=15;fontFamily=Figtree;" vertex="1" parent="1">
+          <mxGeometry x="510" y="75" width="170" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="explanations" value="Explanations&lt;br&gt;&lt;font style=&quot;font-size:12px;font-weight:normal&quot;&gt;Who gains, who loses&lt;/font&gt;" style="rounded=1;arcSize=17;whiteSpace=wrap;html=1;fillColor=#0B2540;strokeColor=none;fontColor=#FFFFFF;fontStyle=1;fontSize=15;fontFamily=Figtree;" vertex="1" parent="1">
+          <mxGeometry x="740" y="75" width="150" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=20;html=1;strokeColor=#0F7F8C;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.3125;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="decisions" target="main">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=20;html=1;strokeColor=#0F7F8C;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.6875;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="decisions" target="interactions">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=20;html=1;strokeColor=#0F7F8C;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.3125;entryDx=0;entryDy=0;" edge="1" parent="1" source="main" target="indicators">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=20;html=1;strokeColor=#0F7F8C;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.6875;entryDx=0;entryDy=0;" edge="1" parent="1" source="interactions" target="indicators">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;arcSize=20;html=1;strokeColor=#0F7F8C;strokeWidth=2;endArrow=block;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="indicators" target="explanations">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

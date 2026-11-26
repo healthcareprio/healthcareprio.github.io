@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulator | Healthcare Prioritization Simulator</title>
+  <meta name="description" content="Set prioritization decisions and see the consequences update.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="simulator">
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="crumbs">Home / Simulator</div>
+      <h1>Prioritization simulator</h1>
+      <p>Choose an option for each decision. The consequences update instantly, and the tables below explain why.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:36px">
+    <div class="wrap">
+      <div class="notice">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16.5v.01"/></svg>
+        <span><b>Draft model.</b> This simulator illustrates ethical trade-offs. It does not predict real outcomes, and it is not a substitute for medical advice.</span>
+      </div>
+
+      <div class="sim">
+        <div class="panel">
+          <div class="panel-head">
+            <div><h2>Decisions</h2><small>Choose one option for each of the 5 decisions.</small></div>
+            <button class="btn btn-ghost" id="reset" type="button" style="padding:9px 16px">Reset</button>
+          </div>
+          <div id="decisions"></div>
+        </div>
+
+        <div class="sim-col-sticky">
+          <div class="panel">
+            <div class="panel-head"><div><h2>Consequences</h2><small>Each of the 5 indicators is scored from 0 to 100.</small></div></div>
+            <div class="gauges" id="gauges"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel" style="margin-top:26px">
+        <div class="panel-head"><h2>Reading the result</h2></div>
+        <div class="results" style="margin-top:0">
+          <div><h3>Why the scores changed</h3><div id="why"></div></div>
+          <div><h3>Who gains, who loses</h3><div id="who"></div></div>
+          <div><h3>The trade-off</h3><div id="trade"></div></div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <span>Want the rules behind the numbers?</span>
+        <a href="how-it-works.html">See How the Model Works &#10140;</a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="js/site.js"></script>
+<script src="js/model-config.js"></script>
+<script src="js/simulator.js"></script>
+</body>
+</html>
