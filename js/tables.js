@@ -5,7 +5,8 @@
 
    Editing: teammates change only the .md files. Supported inside cells:
        [link text](https://example.com)   **bold**   _italic_   `code`
-   Use \| for a literal pipe character. Needs site.js loaded first (for esc). */
+   Use <br> to start a new line inside a cell, and \| for a literal pipe character.
+   Needs site.js loaded first (for esc). */
 
 (function () {
   function inline(text) {
@@ -14,6 +15,7 @@
     s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
     s = s.replace(/`([^`]+)`/g, "<code>$1</code>");
     s = s.replace(/(^|[\s(])_(.+?)_(?=[\s).,;:]|$)/g, "$1<em>$2</em>");
+    s = s.replace(/&lt;br\s*\/?&gt;/gi, "<br>");
     return s;
   }
 
@@ -29,7 +31,9 @@
   }
 
   function render(el, t) {
-    var html = '<div class="table-wrap"><table><thead><tr>' +
+    /* The file name becomes a CSS class (rules.md -> t-rules) for column widths. */
+    var name = el.getAttribute("data-table").split("/").pop().replace(/\.md$/, "");
+    var html = '<div class="table-wrap t-' + esc(name) + '"><table><thead><tr>' +
       t.head.map(function (h) { return "<th>" + inline(h) + "</th>"; }).join("") + "</tr></thead><tbody>" +
       t.rows.map(function (r) {
         return "<tr>" + r.map(function (c) { return "<td>" + inline(c) + "</td>"; }).join("") + "</tr>";

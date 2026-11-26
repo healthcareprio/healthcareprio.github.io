@@ -198,6 +198,7 @@ Rules for editing a table file:
 - Each row must start and end with a pipe character.
 - Pipes do not need to line up, but aligned pipes are easier to read.
 - Write links as `[text](https://example.com)`, bold as `**text**`, and italics as `_text_`.
+- Write `<br>` to start a new line inside a cell.
 - Write `\|` for a literal pipe inside a cell.
 
 The flow diagram on the How the Model Works page is `assets/diagrams/decisions-to-consequences.drawio`. Open it at [app.diagrams.net](https://app.diagrams.net), edit it, then export it as SVG to `assets/diagrams/decisions-to-consequences.svg`.

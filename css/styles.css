@@ -178,6 +178,15 @@ tr:last-child td { border-bottom: 0; }
 td .pill { white-space: nowrap; }
 .placeholder, td em { color: var(--muted); font-style: italic; }
 td a { font-weight: 600; word-break: break-word; }
+/* Column widths for the model tables (the class comes from the .md file name). */
+.t-rules table, .t-interactions table { table-layout: fixed; min-width: 760px; }
+.t-rules th:nth-child(1) { width: 15%; }
+.t-rules th:nth-child(2) { width: 22%; }
+.t-rules th:nth-child(3), .t-rules th:nth-child(4) { width: 31.5%; }
+.t-interactions th:nth-child(1) { width: 13%; }
+.t-interactions th:nth-child(2) { width: 24%; }
+.t-interactions th:nth-child(3) { width: 21%; }
+.t-interactions th:nth-child(4) { width: 42%; }
 .table-error { padding: 16px 18px; color: #a3392c; }
 .rule-list { margin: 0 0 1em; padding-left: 22px; color: var(--ink-soft); font-size: 1.05rem; }
 .rule-list b { color: var(--teal-dark); }
