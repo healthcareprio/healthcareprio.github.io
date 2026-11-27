@@ -8,8 +8,8 @@
      1. Rename decisions / options / indicators (labels and blurbs).
      2. Replace the numbers in each option's `effects` (points added to an indicator).
      3. Rewrite the `interactions` (an effect that only applies for a specific pair).
-     4. Update the matching tables in assets/tables/ (indicators.md, rules.md,
-        interactions.md) so the "How the Model Works" page shows the same numbers.
+     4. Update the matching tables in assets/tables/ (indicators.xlsx, rules.xlsx,
+        interactions.xlsx) so the "How the Model Works" page shows the same numbers.
    ========================================================================== */
 
 var MODEL = {

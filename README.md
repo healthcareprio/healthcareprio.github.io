@@ -13,13 +13,14 @@ This is the final project for IS 201 Computer Ethics. It is a four-page website 
 
 ## Technology choices
 
-| Topic         | Choice                             | Reason                                                                             |
-| ------------- | ---------------------------------- | ---------------------------------------------------------------------------------- |
-| Languages     | HTML, CSS, and plain JavaScript    | The course requires them                                                           |
-| Build step    | None                               | The course does not allow frameworks that need one, such as React, Vue, or Next.js |
-| Database      | None                               | The site is static and runs on GitHub Pages                                        |
-| Table content | Markdown files in `assets/tables/` | Teammates can edit tables without touching the HTML                                |
-| Hosting       | GitHub Pages                       | The course requires a public repository and a Pages link                           |
+| Topic         | Choice                              | Reason                                                                             |
+| ------------- | ----------------------------------- | ---------------------------------------------------------------------------------- |
+| Languages     | HTML, CSS, and plain JavaScript     | The course requires them                                                           |
+| Build step    | None                                | The course does not allow frameworks that need one, such as React, Vue, or Next.js |
+| Database      | None                                | The site is static and runs on GitHub Pages                                        |
+| Table content | Excel files in `assets/tables/`     | Teammates can edit tables without touching the HTML                                |
+| Excel reader  | SheetJS, stored in `assets/vendor/` | Lets the pages read the Excel files in the browser                                 |
+| Hosting       | GitHub Pages                        | The course requires a public repository and a Pages link                           |
 
 ## Run locally
 
@@ -176,47 +177,102 @@ Notes on how the scores work:
 - Each selected option adds its effect to the indicators.
 - Matching interactions add extra effects.
 - The final score is capped between 0 and 100.
-- After you change a number in `js/model-config.js`, update the matching row in `assets/tables/rules.md` or `assets/tables/interactions.md` so the How the Model Works page stays accurate.
+- After you change a number in `js/model-config.js`, update the matching row in `assets/tables/rules.xlsx` or `assets/tables/interactions.xlsx` so the How the Model Works page stays accurate.
 
-## Editing the tables
+## Edit and upload table files
 
-Every table on the site is a Markdown file in `assets/tables/`. Edit the file and the page updates. No HTML changes are needed.
+Every table on the site is an Excel file in `assets/tables/`. You edit the file in Excel, upload it to the GitHub repository, and the page updates. No HTML changes are needed.
 
-| File                    | Page                | Content                                       |
-| ----------------------- | ------------------- | --------------------------------------------- |
-| `indicators.md`         | How the Model Works | What each consequence measures                |
-| `rules.md`              | How the Model Works | Effect, evidence, and weight for every option |
-| `interactions.md`       | How the Model Works | The pairs of decisions that change a result   |
-| `online-references.md`  | References          | Online sources                                |
-| `ai-use.md`             | References          | Declaration of AI use                         |
-| `contributions.md`      | References          | Who did what                                  |
-| `design-inspiration.md` | References          | Design references                             |
+| File                      | Page                | Content                                       |
+| ------------------------- | ------------------- | --------------------------------------------- |
+| `indicators.xlsx`         | How the Model Works | What each consequence measures                |
+| `rules.xlsx`              | How the Model Works | Effect, evidence, and weight for every option |
+| `interactions.xlsx`       | How the Model Works | The pairs of decisions that change a result   |
+| `online-references.xlsx`  | References          | Online sources                                |
+| `ai-use.xlsx`             | References          | Declaration of AI use                         |
+| `contributions.xlsx`      | References          | Who did what                                  |
+| `design-inspiration.xlsx` | References          | Design references                             |
 
-Rules for editing a table file:
+### Before you start
 
-- Keep the header row and the separator row (the one with dashes).
-- Each row must start and end with a pipe character.
-- Pipes do not need to line up, but aligned pipes are easier to read.
-- Write links as `[text](https://example.com)`, bold as `**text**`, and italics as `_text_`.
-- Write `<br>` to start a new line inside a cell.
-- Write `\|` for a literal pipe inside a cell.
+- You need Microsoft Excel, or a free alternative such as LibreOffice Calc.
+- You need a GitHub account that belongs to the `healthcareprio` organization with write access. Ask Jose to invite you.
+- Tell the group before you edit a file. If two people upload the same file, the later upload replaces the earlier one.
+
+### Step 1: Download the latest file
+
+1. Open the tables folder on GitHub.
+
+   ```text
+   https://github.com/healthcareprio/healthcareprio.github.io/tree/master/assets/tables
+   ```
+
+2. Click the file you want to edit, for example `rules.xlsx`.
+3. Click the **Download raw file** button (the download icon at the top right of the file view) and save the file to your computer.
+
+Always download a fresh copy before you start, so you edit the newest version.
+
+### Step 2: Edit the file in Excel
+
+Follow these rules so the website can read your changes:
+
+- Keep the header in row 1 and keep the table on the first sheet. Other sheets are ignored.
+- Do not merge cells.
+- Press `Alt+Enter` to start a new line inside a cell. On a Mac, press `Control+Option+Return`.
+- To add a link, select the cell and press `Ctrl+K`. You can also type `[link text](https://example.com)` inside a cell.
+- Any cell that contains "To be added" is shown in grey italics on the site.
+- Save the file as an Excel Workbook (`.xlsx`) with the same file name. Do not save it as CSV or `.xls`.
+- Close Excel before you upload the file.
+
+### Step 3: Upload the file to GitHub
+
+1. Open the tables folder on GitHub again.
+2. Click **Add file ➜ Upload files**.
+3. Drag your edited file into the page. The file name must match the original exactly, so that it replaces the old file.
+4. Under **Commit changes**, write a short message, for example `Update rules table`.
+5. Select **Commit directly to the master branch**, then click **Commit changes**.
+
+### Step 4: Check the result
+
+1. Wait one to two minutes for GitHub Pages to publish the change.
+2. Open the page on the live site and press `Ctrl+F5` to reload it without the old cached copy.
+
+   ```text
+   https://healthcareprio.github.io/
+   ```
+
+3. Find your table. This is how the "Who did what" table looks on the References page:
+
+   ![The Who did what table on the References page](docs/images/table-on-site.png)
+
+### Troubleshooting
+
+| Problem                             | Likely cause                                 | Fix                                                                        |
+| ----------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
+| The page shows a table error        | The file name changed or the format is wrong | Rename the file back, and save it as `.xlsx`                               |
+| Your change does not appear         | GitHub Pages is still publishing             | Wait two minutes and press `Ctrl+F5`                                       |
+| There is no **Upload files** option | Your account does not have write access      | Ask Jose to add you to the organization                                    |
+| Some characters look wrong          | The file was saved as CSV                    | Save it again as an Excel Workbook (`.xlsx`)                               |
+| You overwrote someone's changes     | Two people edited the same file              | Ask for their copy, or re-download the older version from the file history |
 
 The flow diagram on the How the Model Works page is `assets/diagrams/decisions-to-consequences.drawio`. Open it at [app.diagrams.net](https://app.diagrams.net), edit it, then export it as SVG to `assets/diagrams/decisions-to-consequences.svg`.
 
 ## Project structure
 
-| Path                                                                   | Purpose                                            |
-| ---------------------------------------------------------------------- | -------------------------------------------------- |
-| `index.html`, `simulator.html`, `how-it-works.html`, `references.html` | The four pages                                     |
-| `css/styles.css`                                                       | Design tokens and styles                           |
-| `js/site.js`                                                           | Navbar, footer, and team data                      |
-| `js/model-config.js`                                                   | The model used by the simulator                    |
-| `js/simulator.js`                                                      | Simulator interface and calculation engine         |
-| `js/tables.js`                                                         | Loads the Markdown tables and renders them as HTML |
-| `assets/tables/`                                                       | Markdown source for every table                    |
-| `assets/diagrams/`                                                     | Diagram sources (`.drawio`) and exports (`.svg`)   |
-| `assets/images/`                                                       | Photos                                             |
-| `PROMPT.md`                                                            | The prompt used to generate this site              |
+| Path                                                                   | Purpose                                          |
+| ---------------------------------------------------------------------- | ------------------------------------------------ |
+| `index.html`, `simulator.html`, `how-it-works.html`, `references.html` | The four pages                                   |
+| `css/styles.css`                                                       | Design tokens and styles                         |
+| `js/site.js`                                                           | Navbar, footer, and team data                    |
+| `js/model-config.js`                                                   | The model used by the simulator                  |
+| `js/simulator.js`                                                      | Simulator interface and calculation engine       |
+| `js/tables.js`                                                         | Loads the Excel tables and renders them as HTML  |
+| `assets/tables/`                                                       | Excel source for every table                     |
+| `assets/vendor/`                                                       | SheetJS library that reads the Excel files       |
+| `docs/images/`                                                         | Screenshots used in this README                  |
+| `assets/diagrams/`                                                     | Diagram sources (`.drawio`) and exports (`.svg`) |
+| `assets/images/`                                                       | Photos                                           |
+| `PROMPT.md`                                                            | The prompt used to generate this site            |
 
 ## Disclaimer
 

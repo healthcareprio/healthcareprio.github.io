@@ -20,3 +20,7 @@ desktop.ini
 # Logs and local tooling
 *.log
 node_modules/
+
+# Excel and LibreOffice temporary lock files
+~$*
+.~lock.*#
