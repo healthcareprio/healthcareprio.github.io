@@ -277,4 +277,4 @@ The flow diagram on the How the Model Works page is `assets/diagrams/decisions-t
 
 ## Disclaimer
 
-This site is an educational simulation. It illustrates ethical trade-offs and does not predict real outcomes. It is not medical advice, and it is not intended for clinical use. All numeric values are hypothetical.
+This site is an educational simulation about ethical trade-offs. It is not a triage tool, and it should not be used to make decisions about real patients. It does not predict real outcomes, it is not intended for clinical use, and all numeric values are hypothetical.

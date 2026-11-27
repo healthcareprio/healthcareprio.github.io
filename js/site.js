@@ -60,7 +60,7 @@ function esc(s) {
   var footer =
     '<footer class="site-footer"><div class="wrap"><div class="cols">' +
     "<div>" + brand("./") +
-    "<p>This site is an educational simulation. It illustrates ethical trade-offs and does not replace medical advice.</p></div>" +
+    "<p>This site is an educational simulation about ethical trade-offs. It is not a triage tool, and it should not be used to make decisions about real patients.</p></div>" +
     "<div><h4>Explore</h4><ul>" + NAV.map(function (n) { return '<li><a href="' + n.href + '">' + n.label + "</a></li>"; }).join("") + "</ul></div>" +
     "<div><h4>The Team</h4><ul>" + TEAM.map(function (t) { return "<li>" + esc(t) + "</li>"; }).join("") + "</ul></div>" +
     '</div><div class="legal"><span>&copy; 2026 ' + SITE.course + " &middot; Final Project</span>" +
