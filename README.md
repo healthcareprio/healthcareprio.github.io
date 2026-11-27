@@ -197,7 +197,7 @@ Every table on the site is an Excel file in `assets/tables/`. You edit the file 
 ### Before you start
 
 - You need Microsoft Excel, or a free alternative such as LibreOffice Calc.
-- You need a GitHub account that belongs to the `healthcareprio` organization with write access. Ask Jose to invite you.
+- You need a GitHub account that belongs to the `healthcareprio` organization with write access. 
 - Tell the group before you edit a file. If two people upload the same file, the later upload replaces the earlier one.
 
 ### Step 1: Download the latest file
@@ -252,7 +252,7 @@ Follow these rules so the website can read your changes:
 | ----------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
 | The page shows a table error        | The file name changed or the format is wrong | Rename the file back, and save it as `.xlsx`                               |
 | Your change does not appear         | GitHub Pages is still publishing             | Wait two minutes and press `Ctrl+F5`                                       |
-| There is no **Upload files** option | Your account does not have write access      | Ask Jose to add you to the organization                                    |
+| There is no **Upload files** option | Your account does not have write access      | Request access to the organization                                    |
 | Some characters look wrong          | The file was saved as CSV                    | Save it again as an Excel Workbook (`.xlsx`)                               |
 | You overwrote someone's changes     | Two people edited the same file              | Ask for their copy, or re-download the older version from the file history |
 
