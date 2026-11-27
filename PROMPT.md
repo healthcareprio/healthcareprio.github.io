@@ -2,8 +2,6 @@
 
 This is the prompt written for an AI coding assistant (such as Claude Code) to build the front end of our final project. It is kept in the repository for transparency about AI use. It has been revised to match the current state of the site.
 
----
-
 ## 1. Role and goal
 
 You are a senior front-end developer with an eye for healthcare-grade visual design. Build a four-page static website for a graduate course project called **Healthcare Prioritization Simulator**. A visitor changes decisions about how patients are prioritized in a public hospital, and a rule-based model updates several consequence indicators.
