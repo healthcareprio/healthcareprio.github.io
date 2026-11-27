@@ -157,7 +157,9 @@ section { padding: 76px 0; }
 .delta.up { color: #25774a; }
 .delta.down { color: #b3402f; }
 .results { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
-.results-col { display: grid; gap: 26px; }
+.results-col { display: grid; gap: 44px; }
+.results .table-wrap, .gauge { transition: transform .2s ease, box-shadow .2s ease; }
+.results .table-wrap:hover, .gauge:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(11, 37, 64, .06), 0 14px 32px rgba(11, 37, 64, .12); }
 .results h2 { font-size: 1.2rem; margin-bottom: 14px; }
 .results table { min-width: 0; }
 .results td:first-child { white-space: nowrap; width: 1%; font-weight: 600; }
