@@ -14,16 +14,24 @@ Build the complete **front end and interface only**. Our group has not decided t
 
 - Course: IS 201 Computer Ethics. The final project is a Technology and Society Ethics Simulator.
 - Our scenario is **Healthcare Prioritization**: patient prioritization in a public hospital. The group has five members.
-- Members: Karol Anne F. Panaligan, Mickole S. Malgapo, Marianne Sabio, Don Pancho, and Jose Eden. Jose is the only developer.
 - Hosting: **GitHub Pages**, from a public repository in the `healthcareprio` organization, served at `https://healthcareprio.github.io/`. There is no server and no database.
 - The course describes the scenario as "AI-assisted patient prioritization in a public hospital", so the Scenario overview heading on Home uses the phrase "AI-assisted". Do not mention any university name in the site or the README.
 
 ### Course requirements that constrain the build
 
-- The site is built with **HTML, CSS, and JavaScript**. Libraries from a CDN are allowed. **Frameworks that need a build step (React, Vue, Next.js, Nest, and similar) are not allowed.** Use plain static files.
+- The site is built with **HTML, CSS, and JavaScript**. 
+- Libraries from a CDN are allowed. 
+- **Frameworks that need a build step (React, Vue, Next.js, Nest, and similar) are not allowed.**
+- Use plain static files.
 - The link must load and run as submitted, with no setup.
-- The final model needs 5 or more decision variables (each with 2 or more options), 5 or more indicators (covering equity, governance, and sustainability, plus others), and 4 or more interactions (each on a different pair of variables, each justified). Indicators update automatically, several variables can affect the same indicator, and trade-offs are real rather than right or wrong.
-- There are four pages: Home, Simulator, How the Model Works, and References (which also holds AI use and contributions).
+- The final model needs 5 or more decision variables (each with 2 or more options), 5 or more indicators (covering equity, governance, and sustainability, plus others), and 4 or more interactions (each on a different pair of variables, each justified). 
+- Indicators update automatically, several variables can affect the same indicator, and trade-offs are real rather than right or wrong.
+- There are four pages: 
+   - Home
+   - Simulator
+   - How the Model Works
+   - References (which also holds AI use and contributions)
+
 - A 10 to 12 minute YouTube video is embedded on Home.
 - A course sample simulator exists, and it uses pill buttons and horizontal bars. Our simulator must look and feel different from it.
 
@@ -33,7 +41,9 @@ Build the complete **front end and interface only**. Our group has not decided t
 - Use **relative paths only** (no leading `/`).
 - Google Fonts (Figtree) is the only external resource.
 - Include an empty `.nojekyll` file.
-- Tables are loaded with `fetch()` from Excel (`.xlsx`) files and read in the browser with the SheetJS library (stored in `assets/vendor/`), so the site needs a web server. Opening a page directly from disk shows a clear error message in place of each table. The README must say to use a local server.
+- Tables are loaded with `fetch()` from Excel (`.xlsx`) files and read in the browser with the SheetJS library (stored in `assets/vendor/`), so the site needs a web server. 
+- Opening a page directly from disk shows a clear error message in place of each table. 
+- The README must say to use a local server.
 
 ## 4. Visual design direction
 
@@ -42,7 +52,6 @@ The site must feel **premium, calm, and hospital-related**, like a modern health
 - **Palette:** clinical teal as the primary (`#0f7f8c`), deep navy for text and dark bands (`#0b2540`), a soft cool-grey page background (`#f5f8fa`), and white cards. Supporting accents are blue, green, amber, and a restrained coral for urgent states. Define every color as a CSS custom property in `:root`.
 - **Typography:** one clean **sans-serif** family (Figtree), weights 400 to 800. **No serif fonts.**
 - **It must not look AI-generated.** Avoid purple or pink gradients, glassmorphism, neon glows, sparkle or robot or brain imagery, emoji, gradient text, hype copy, and heavy rounding everywhere. Use flat surfaces, thin borders, soft shadows, and generous whitespace.
-- **Brand mark:** a minimal white icon of a hand holding a heart on a teal rounded square. It signals care and trust. Do not use a plain cross or plus sign. The favicon uses the same mark.
 - **Layout:** content width about 1160px, 20px gutters on mobile, a sticky white header (no banner above it), and alternating white and tinted section bands.
 - **Responsive:** works from 360px to wide desktop, with the mobile navigation collapsing into a toggle.
 - **Accessibility:** semantic landmarks, a skip link, visible focus rings, `aria-current="page"` on the active nav link, sufficient contrast, `prefers-reduced-motion` respected, and real radio inputs with labels.
@@ -63,7 +72,7 @@ The site must feel **premium, calm, and hospital-related**, like a modern health
 3. **How to use this site:** three numbered steps.
 4. **Project video:** a 16:9 placeholder with an HTML comment showing how to paste the YouTube iframe.
 5. **The team behind the application:** one card per member with an initials avatar and the full name, with no role line. Show all five in one row on wide screens, then wrap on smaller ones.
-6. **Closing call to action** on a dark band ("See the trade-offs for yourself") with a button to the simulator.
+6. **Closing call to action** on a dark band with a button to the simulator.
 
 ### Page 2: Simulator (`simulator.html`)
 
@@ -72,7 +81,8 @@ The site must feel **premium, calm, and hospital-related**, like a modern health
 - **Consequences panel (right, sticky on desktop):** five indicators named Consequence A to E, each as a **circular ring gauge** (SVG) with the score from 0 to 100, a dimension tag, and an up or down delta after each change. The subtitle reads "Each of the 5 indicators is scored from 0 to 100." Rings animate smoothly.
 - **Reading the result panel (full width):** three **tables**, generated by JavaScript on every change: "Why the scores changed" (cause and effect, with a labelled badge when an interaction fires), "Who gains, who loses" (one row per decision), and "The trade-off" (strongest indicator, weakest indicator, and what is traded off).
 - A visible callout below, "Want the rules behind the numbers? See How the Model Works ➜", styled so it stands out.
-- **Logic (placeholder, data-driven):** all numbers live in `js/model-config.js`. The engine in `js/simulator.js` starts every indicator at 50, adds each selected option's effects, adds an interaction's effects only when both of its conditions are selected, and clamps the result to 0 to 100. Provide dummy effects that vary enough that combinations visibly change the rings, and **at least four placeholder interactions on different decision pairs**. No network calls.
+- **Logic (placeholder, data-driven):** all numbers live in `js/model-config.js`. The engine in `js/simulator.js` starts every indicator at 50, adds each selected option's effects, adds an interaction's effects only when both of its conditions are selected, and clamps the result to 0 to 100. 
+- Provide dummy effects that vary enough that combinations visibly change the rings, and **at least four placeholder interactions on different decision pairs**. No network calls.
 
 ### Page 3: How the Model Works (`how-it-works.html`)
 
