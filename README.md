@@ -164,12 +164,13 @@ You can rename the local folder to anything you like. Git does not care about th
 
 ## Editing the model
 
-| File                     | What it controls                                                                |
-| ------------------------ | ------------------------------------------------------------------------------- |
-| `js/model-config.js`     | Decisions, options, indicators, effects, and interactions used by the simulator |
-| `js/site.js`             | Site name and the list of team members                                          |
-| `index.html`             | The Home text and the YouTube embed (replace the marked placeholder block)      |
-| `assets/images/hero.jpg` | The photo shown in the Home hero (optional)                                     |
+| File                               | What it controls                                                                                       |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| `js/model-config.js`               | Decisions, options, indicators, effects, and interactions used by the simulator                        |
+| `js/site.js`                       | Site name and the list of team members                                                                 |
+| `index.html`                       | The Home text and the YouTube embed (replace the marked placeholder block)                             |
+| `assets/images/hero.jpg`           | The photo shown in the Home hero (optional)                                                            |
+| `assets/images/social-preview.jpg` | The thumbnail shown when the link is shared on WhatsApp, Discord, and similar apps (1200 × 630 pixels) |
 
 Notes on how the scores work:
 

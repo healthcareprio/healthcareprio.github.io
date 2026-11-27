@@ -158,6 +158,7 @@ Write complete sentences and align the pipes in every Markdown table in the READ
 - Keyboard-only use works end to end, and focus is always visible.
 - No serif fonts, no emoji, no gradient text, and no sparkle icons anywhere.
 - No mention of any university name anywhere in the site or README.
+- Every page has Open Graph and Twitter card tags, with an absolute `og:image` URL pointing to `assets/images/social-preview.jpg` (1200 × 630 pixels, under 300 KB, showing the logo, the headline, and the hero photo), so shared links show a thumbnail.
 - The layout has no horizontal scroll at 360px (tables scroll inside their own container).
 - No real triage logic, clinical rules, or medical claims are implemented.
 
