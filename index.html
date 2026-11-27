@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=12">
+  <link rel="stylesheet" href="css/styles.css?v=16">
 </head>
 <body data-page="home">
 <main id="main">
@@ -56,17 +56,17 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
       <div class="grid g3">
-        <div class="card">
+        <div class="card card-lift">
           <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
           <h3>Context</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation.</p>
         </div>
-        <div class="card">
+        <div class="card card-lift">
           <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg></div>
           <h3>Societal significance</h3>
           <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
-        <div class="card">
+        <div class="card card-lift">
           <div class="icon-chip"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c.5-4 3-6 6.5-6s6 2 6.5 6M16 5a3.5 3.5 0 010 7M18 14c2 .6 3.3 2.6 3.5 6"/></svg></div>
           <h3>Affected stakeholders</h3>
           <p>Patients, clinicians, hospital administrators, and the community. Excepteur sint occaecat cupidatat non proident.</p>
@@ -82,9 +82,9 @@
         <h2>Three steps from decision to insight</h2>
       </div>
       <div class="grid g3">
-        <div class="card"><div class="step-n">1</div><h3>Set the decisions</h3><p>Choose an option for each policy decision in the simulator. Lorem ipsum dolor sit amet.</p></div>
-        <div class="card"><div class="step-n">2</div><h3>Read the consequences</h3><p>Watch the indicators update and see who gains, who loses, and which values are traded off.</p></div>
-        <div class="card"><div class="step-n">3</div><h3>Inspect the rules</h3><p>Open <a href="how-it-works.html">How the Model Works</a> to see every rule and the reasoning behind it.</p></div>
+        <div class="card card-lift"><div class="step-n">1</div><h3>Set the decisions</h3><p>Choose an option for each policy decision in the simulator. Lorem ipsum dolor sit amet.</p></div>
+        <div class="card card-lift"><div class="step-n">2</div><h3>Read the consequences</h3><p>Watch the indicators update and see who gains, who loses, and which values are traded off.</p></div>
+        <div class="card card-lift"><div class="step-n">3</div><h3>Inspect the rules</h3><p>Open <a href="how-it-works.html">How the Model Works</a> to see every rule and the reasoning behind it.</p></div>
       </div>
     </div>
   </section>
@@ -132,7 +132,7 @@
 <script src="js/site.js?v=7"></script>
 <script>
   document.getElementById("team").innerHTML = TEAM.map(function (name) {
-    return '<div class="card person"><div class="avatar" aria-hidden="true">' + initials(name) + "</div><h3>" + esc(name) + "</h3></div>";
+    return '<div class="card card-lift person"><div class="avatar" aria-hidden="true">' + initials(name) + "</div><h3>" + esc(name) + "</h3></div>";
   }).join("");
 </script>
 </body>
