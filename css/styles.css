@@ -247,6 +247,13 @@ td a { font-weight: 600; word-break: break-word; }
   .gauges { grid-template-columns: repeat(2, 1fr); }
   .site-footer .cols { grid-template-columns: 1fr; gap: 28px; }
 }
+/* Closing call-to-action band on Home. */
+.cta-band { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+.cta-copy { max-width: 620px; }
+@media (max-width: 760px) {
+  .cta-band { flex-direction: column; align-items: stretch; }
+  .cta-band .btn { align-self: center; }
+}
 /* Small phones: stack the hero buttons, centered, with the same width. */
 @media (max-width: 480px) {
   .hero-actions { flex-direction: column; align-items: center; }
