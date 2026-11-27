@@ -247,6 +247,35 @@ td a { font-weight: 600; word-break: break-word; }
   .gauges { grid-template-columns: repeat(2, 1fr); }
   .site-footer .cols { grid-template-columns: 1fr; gap: 28px; }
 }
+/* ---------- Notes page ---------- */
+.notes-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 48px; align-items: start; }
+.toc { position: sticky; top: 92px; font-size: .92rem; }
+.toc b { display: block; margin-bottom: 10px; color: var(--ink); }
+.toc ol { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
+.toc a { display: block; padding: 6px 0 6px 14px; margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-soft); text-decoration: none; }
+.toc a:hover { color: var(--teal-dark); border-left-color: var(--teal); }
+.notes section { padding: 0 0 52px; scroll-margin-top: 92px; }
+.notes h2 { margin-bottom: .6em; }
+.notes h3 { margin: 1.8em 0 .5em; font-size: 1.15rem; }
+.notes p, .notes li { color: var(--ink-soft); }
+.notes ul, .notes ol { padding-left: 22px; margin: 0 0 1em; }
+.notes li { margin-bottom: 6px; }
+.notes strong { color: var(--ink); }
+.notes blockquote { margin: 0 0 1em; padding: 14px 20px; background: var(--teal-tint); border-left: 4px solid var(--teal); border-radius: 0 12px 12px 0; color: var(--ink); font-weight: 600; }
+.notes code { background: #eaf0f4; padding: 1px 6px; border-radius: 6px; font-size: .88em; }
+.notes pre { background: var(--navy); color: #d6e4f0; padding: 18px 22px; border-radius: 12px; overflow-x: auto; font-size: .86rem; line-height: 1.65; margin: 0 0 1em; }
+.notes .note-line { margin-top: 14px; font-size: .95rem; }
+.t-notes-decisions th:nth-child(1), .t-notes-indicators th:nth-child(1), .t-notes-interactions th:nth-child(1) { width: 8%; }
+.t-notes-decisions th:nth-child(2) { width: 30%; }
+.t-notes-grading th:nth-child(2) { width: 12%; }
+.t-notes-interactions th:nth-child(2) { width: 14%; }
+.t-notes-interactions th:nth-child(3) { width: 46%; }
+.t-notes-decisions table, .t-notes-indicators table, .t-notes-interactions table, .t-notes-grading table { table-layout: fixed; min-width: 640px; }
+@media (max-width: 960px) {
+  .notes-layout { grid-template-columns: 1fr; gap: 24px; }
+  .toc { position: static; padding: 16px 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
+}
+
 /* Small screens: the two footer legal lines stack and are centered. */
 @media (max-width: 600px) {
   .site-footer .legal { flex-direction: column; align-items: center; text-align: center; gap: 6px; }

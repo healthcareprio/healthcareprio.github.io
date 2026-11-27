@@ -113,6 +113,13 @@ Sections, in order (the page title is "References, AI use, and contributions"):
 3. **Who did what** (eyebrow "Teamwork"): a table with the columns Member and Contributions, with no Role column.
 4. **Design inspiration:** a table of Source and What it informed, covering the public healthcare sites used for general tone and structure plus the typeface. Do not list the course sample site. Do not add a course-references section.
 
+### Extra page: Notes (
+otes.html)
+
+A draft proposal page for the group, served at /notes (GitHub Pages serves 
+otes.html at that address). It is not in the navbar and has 
+oindex. It has a sticky on-this-page list, and its tables are Excel files named ssets/tables/notes-*.xlsx. The text is neutral and does not mention who wrote it or who builds the site. It has no timeline.
+
 ## 7. Tables live in Excel files
 
 **No table may be written inline in an HTML file.** Every static table is an Excel file in `assets/tables/` so teammates can edit it in Excel and upload it to GitHub without touching HTML:

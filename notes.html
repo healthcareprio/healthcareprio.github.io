@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Notes | Healthcare Prioritization Simulator</title>
+  <meta name="description" content="A draft proposal for the Healthcare Prioritization project: open questions, the scenario, a starter model, and ways to share the work.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0f7f8c">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Healthcare Prio">
+  <meta property="og:title" content="Project Notes | Healthcare Prioritization Simulator">
+  <meta property="og:description" content="A draft proposal for the Healthcare Prioritization project: open questions, the scenario, a starter model, and ways to share the work.">
+  <meta property="og:url" content="https://healthcareprio.github.io/notes">
+  <meta property="og:image" content="https://healthcareprio.github.io/assets/images/social-preview.jpg?v=1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://healthcareprio.github.io/notes">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=23">
+</head>
+<body data-page="notes">
+<main id="main">
+  <div class="page-head">
+    <div class="wrap">
+      <div class="crumbs">Home / Notes</div>
+      <h1>Project notes</h1>
+      <p>A draft proposal for the Healthcare Prioritization project. Everything here is a suggestion that the group can change.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:44px">
+    <div class="wrap notes-layout">
+
+      <aside class="toc" aria-label="On this page">
+        <b>On this page</b>
+        <ol>
+          <li><a href="#open-questions">Open questions</a></li>
+          <li><a href="#questions">Questions and answers</a></li>
+          <li><a href="#scenario">The scenario</a></li>
+          <li><a href="#grading">What is graded</a></li>
+          <li><a href="#model">Starter model</a></li>
+          <li><a href="#share-work">Ways to share the work</a></li>
+          <li><a href="#video">Video outline</a></li>
+          <li><a href="#decisions">How decisions could be made</a></li>
+        </ol>
+      </aside>
+
+      <article class="notes">
+
+        <section id="open-questions">
+          <h2>Open questions</h2>
+          <p>These are the points we still need to agree on.</p>
+          <ul>
+            <li><strong>Setting:</strong> an emergency department (ED), or a general outpatient or specialty clinic queue? The recommendation is the ED.</li>
+            <li><strong>The AI:</strong> what exactly does it do? The recommendation is that it produces a priority score that staff see, and the hospital decides how much to trust it.</li>
+            <li><strong>Indicators:</strong> should clinical safety be a sixth indicator?</li>
+            <li><strong>Workstreams:</strong> which workstream would each member like to take? (See "Ways to share the work".)</li>
+            <li><strong>Video:</strong> who will present which part?</li>
+          </ul>
+          <p class="note-line">Already decided: the site lives at <code>https://healthcareprio.github.io/</code>.</p>
+        </section>
+
+        <section id="questions">
+          <h2>Questions and answers</h2>
+          <p>Some questions that may come up while we plan, with suggested answers.</p>
+          <div data-table="assets/tables/notes-faq.xlsx"></div>
+        </section>
+
+        <section id="scenario">
+          <h2>The scenario</h2>
+          <p>The course describes the scenario in one line: <strong>"AI-assisted patient prioritization in a public hospital."</strong> That means:</p>
+          <ul>
+            <li>A hospital has more patients than staff, beds, or time. Someone or something must decide <strong>who is seen first</strong>.</li>
+            <li>An <strong>AI system helps make that decision</strong> by ranking or scoring patients. Humans may or may not stay in the loop.</li>
+            <li>The ethical question is not "is the AI accurate?" It is: <strong>what trade-offs does each design choice create</strong> for fairness, accountability, privacy, sustainability, and staff?</li>
+          </ul>
+          <p>It can be framed as triage, but we are not building a medical tool. We are building a <strong>model of ethical trade-offs</strong>. The simulator illustrates trade-offs and does not predict real outcomes.</p>
+
+          <h3>What the AI does in this scenario</h3>
+          <p>The course says <strong>AI-assisted</strong>, so an AI system is part of the story and the model must treat it that way. We do not build an AI. We model the <strong>decisions a hospital makes about using one</strong>.</p>
+          <p>A proposed one-sentence definition, to confirm with the group:</p>
+          <blockquote>The AI reads a patient's vitals, symptoms, and records and produces a priority score. Staff see the ranking, and the hospital decides how much to trust it.</blockquote>
+          <p>AI-specific ethical issues the model should be able to show:</p>
+          <div data-table="assets/tables/notes-ai-issues.xlsx"></div>
+
+          <h3>What the reference projects tell us</h3>
+          <p>The reference repositories collected so far are mostly <strong>emergency-department (ED) triage or queue systems</strong>:</p>
+          <div data-table="assets/tables/notes-reference-projects.xlsx"></div>
+          <p style="margin-top:18px">Two observations:</p>
+          <ol>
+            <li><strong>None of them report evaluation results or ethics analysis.</strong> They are engineering demos. Our strength can be the ethics reasoning, which carries 30% of the grade.</li>
+            <li>Several of them (HospitalSim, PatientSim, the PMC paper) are about simulated <em>patients</em> for training, not about prioritizing real queues. They are best cited as background only.</li>
+          </ol>
+
+          <h3>Proposed setting</h3>
+          <blockquote>A public hospital emergency department in the Philippines uses an AI-assisted tool to rank waiting patients.</blockquote>
+          <ul>
+            <li>Everyone already understands an ED queue, so the video can explain it in about 30 seconds.</li>
+            <li>A public hospital brings real equity issues: cost, distance, crowding, and limited staff.</li>
+            <li>The Philippine context lets us cite local law (the Data Privacy Act) and DOH policy.</li>
+            <li>It is concrete enough for realistic decisions, and simple enough that no medical expertise is needed.</li>
+          </ul>
+        </section>
+
+        <section id="grading">
+          <h2>What is graded</h2>
+          <div data-table="assets/tables/notes-grading.xlsx"></div>
+          <p style="margin-top:18px">The website is the easier part. Ethical reasoning and model quality carry <strong>60% of the grade</strong>, so ideas and evidence are the most valuable contribution.</p>
+          <h3>Requirements to keep in view</h3>
+          <ul>
+            <li>At least 5 decisions, each with 2 or more real options.</li>
+            <li>At least 5 indicators, covering <strong>equity, governance, and sustainability</strong>, plus others.</li>
+            <li>At least 4 interactions, each on a <strong>different pair</strong> of decisions, each justified.</li>
+            <li>Apply at least 2 of: ethical frameworks, privacy and data rights, cybersecurity, AI, and software development. The scenario is AI-assisted, so AI is covered by default. Privacy and cybersecurity are good additions.</li>
+            <li>Everything (rules, references, explanations) lives <strong>inside the website</strong>, with no separate report.</li>
+            <li>Every member contributes and appears in the video.</li>
+          </ul>
+        </section>
+
+        <section id="model">
+          <h2>Starter model</h2>
+          <p>This is a starting point to react to, not a final answer. It is meant to fit the course requirements, and it can be rewritten freely.</p>
+
+          <h3>Five decisions (what the hospital chooses)</h3>
+          <div data-table="assets/tables/notes-decisions.xlsx"></div>
+
+          <h3>Six indicators (what changes, scored 0 to 100)</h3>
+          <div data-table="assets/tables/notes-indicators.xlsx"></div>
+          <p class="note-line">The site currently holds five indicators. Adding a sixth takes one more line in the data file.</p>
+
+          <h3>Four interactions (the effect depends on a pair of choices)</h3>
+          <div data-table="assets/tables/notes-interactions.xlsx"></div>
+          <p class="note-line">All four use different pairs of decisions, as required.</p>
+
+          <h3>Candidate sources</h3>
+          <ul>
+            <li>The Philippine <strong>Data Privacy Act of 2012 (RA 10173)</strong>, for the privacy rules.</li>
+            <li>The <strong>ACM Code of Ethics and Professional Conduct</strong>, for responsibility and fairness.</li>
+            <li><strong>WHO, Ethics and governance of artificial intelligence for health (2021)</strong>, for governance and oversight.</li>
+            <li>Established triage references: the <strong>Emergency Severity Index (ESI)</strong> and the <strong>Manchester Triage System</strong>, for the idea of severity tiers.</li>
+            <li>Course topic readings, which are the best source of the "course concepts" the rubric asks for.</li>
+            <li>DOH Philippines guidance on emergency care, for the public-hospital context.</li>
+          </ul>
+          <p>Please open and confirm each source before citing it.</p>
+        </section>
+
+        <section id="share-work">
+          <h2>Suggested ways to share the work</h2>
+          <p>Most of the contribution is ideas and evidence. The website only displays what the group decides.</p>
+
+          <h3>Five workstreams</h3>
+          <p>With five members, five decisions, and five indicators, each member can own one slice and review the next member's. Names are not assigned yet, so everyone can pick based on interest. Whoever is most comfortable presenting could take A, since it frames the video.</p>
+          <div data-table="assets/tables/notes-workstreams.xlsx"></div>
+
+          <h3>Rule cards</h3>
+          <p style="margin-top:6px">Each rule can be written as a <strong>rule card</strong>, one per rule, either in a shared doc or directly in the Excel table (<code>rules.xlsx</code>):</p>
+<pre>Rule ID:            R-D4-02
+IF (decision):      Transparency = Black box
+THEN (indicator):   Accountability   -15
+BECAUSE:            Nobody can inspect or contest an unexplained ranking.
+Source:             WHO 2021 guidance, section on transparency (verify link)
+How weight was set: Large effect (-15) because it removes the ability to appeal.
+Course concept:     Responsible innovation, accountability
+Assumption:         Staff have no other way to see the score logic.
+Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
+          <p>A rule card covers what the grader looks for on the How the Model Works page: what the rule does, the evidence, how the weight was set, the course concept, and any assumption. The numbers then go into <code>js/model-config.js</code> and the justification into <code>assets/tables/rules.xlsx</code>. The README section <a href="https://github.com/healthcareprio/healthcareprio.github.io#edit-and-upload-table-files" target="_blank" rel="noopener">Edit and upload table files</a> explains how to edit the Excel tables.</p>
+
+          <h3>Shared responsibilities</h3>
+          <p>Along the way, each member can:</p>
+          <ul>
+            <li>Write rule cards for their decision and indicator (about 3 to 6 cards each).</li>
+            <li>Review one other member's cards.</li>
+            <li>Add their references to the References page.</li>
+            <li>Present their part in the video.</li>
+            <li>Record their work in the "Who did what" table.</li>
+          </ul>
+        </section>
+
+        <section id="video">
+          <h2>Video outline</h2>
+          <p>A 10 to 12 minute video, with every member on camera, in this order:</p>
+          <ol>
+            <li>Scenario and why it matters (workstream A).</li>
+            <li>Model walkthrough: variables, indicators, key rules, and one interaction (B, C, and D split this).</li>
+            <li>Demo: how to use the site, then two contrasting decision sets and how the outcomes differ (E).</li>
+            <li>Ethical insights and limitations: who gains, who loses, and what the model cannot capture (everyone, one sentence each).</li>
+          </ol>
+        </section>
+
+        <section id="decisions">
+          <h2>How decisions could be made</h2>
+          <p>A light process can keep the group moving:</p>
+          <ol>
+            <li><strong>The owner proposes.</strong> The member who owns a decision writes its options and rules.</li>
+            <li><strong>A 48-hour window.</strong> The group can respond in the chat, and silence counts as agreement.</li>
+            <li><strong>Disagreements.</strong> A short 15-minute call. If the group is still stuck, the team leader decides.</li>
+            <li><strong>A scope freeze.</strong> Once the group agrees on the scope, later changes only fix errors instead of adding ideas.</li>
+            <li><strong>One shared document</strong> is the source of truth. The chat is for talking, and the document is for decisions.</li>
+          </ol>
+        </section>
+
+      </article>
+    </div>
+  </section>
+</main>
+<script src="js/site.js?v=20"></script>
+<script src="assets/vendor/xlsx.full.min.js"></script>
+<script src="js/tables.js?v=14"></script>
+</body>
+</html>

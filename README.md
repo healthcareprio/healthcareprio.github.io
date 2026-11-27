@@ -4,12 +4,13 @@ This is the final project for IS 201 Computer Ethics. It is a four-page website 
 
 ## Pages
 
-| Page                | File                | Purpose                                                                  |
-| ------------------- | ------------------- | ------------------------------------------------------------------------ |
-| Home                | `index.html`        | Scenario overview, project video, and the team                           |
-| Simulator           | `simulator.html`    | Decisions go in, and the consequence dashboard and explanations come out |
-| How the Model Works | `how-it-works.html` | Diagram, rules, interactions, assumptions, and limitations               |
-| References          | `references.html`   | Sources, declaration of AI use, and who did what                         |
+| Page                | File                | Purpose                                                                          |
+| ------------------- | ------------------- | -------------------------------------------------------------------------------- |
+| Home                | `index.html`        | Scenario overview, project video, and the team                                   |
+| Simulator           | `simulator.html`    | Decisions go in, and the consequence dashboard and explanations come out         |
+| How the Model Works | `how-it-works.html` | Diagram, rules, interactions, assumptions, and limitations                       |
+| References          | `references.html`   | Sources, declaration of AI use, and who did what                                 |
+| Notes               | `notes.html`        | A draft proposal for the team. It is not in the navbar and is served at `/notes` |
 
 ## Technology choices
 
@@ -252,7 +253,7 @@ Follow these rules so the website can read your changes:
 | ----------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------- |
 | The page shows a table error        | The file name changed or the format is wrong | Rename the file back, and save it as `.xlsx`                               |
 | Your change does not appear         | GitHub Pages is still publishing             | Wait two minutes and press `Ctrl+F5`                                       |
-| There is no **Upload files** option | Your account does not have write access      | Request access to the organization                                    |
+| There is no **Upload files** option | Your account does not have write access      | Request access to the organization                                         |
 | Some characters look wrong          | The file was saved as CSV                    | Save it again as an Excel Workbook (`.xlsx`)                               |
 | You overwrote someone's changes     | Two people edited the same file              | Ask for their copy, or re-download the older version from the file history |
 
