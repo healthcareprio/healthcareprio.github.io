@@ -247,6 +247,10 @@ td a { font-weight: 600; word-break: break-word; }
   .gauges { grid-template-columns: repeat(2, 1fr); }
   .site-footer .cols { grid-template-columns: 1fr; gap: 28px; }
 }
+/* Small screens: the two footer legal lines stack and are centered. */
+@media (max-width: 600px) {
+  .site-footer .legal { flex-direction: column; align-items: center; text-align: center; gap: 6px; }
+}
 /* Closing call-to-action band on Home. */
 .cta-band { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
 .cta-copy { max-width: 620px; }
