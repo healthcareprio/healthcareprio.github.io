@@ -6,7 +6,7 @@ This is the prompt written for an AI coding assistant (such as Claude Code) to b
 
 You are a senior front-end developer with an eye for healthcare-grade visual design. Build a four-page static website for a graduate course project called **Healthcare Prioritization Simulator**. A visitor changes decisions about how patients are prioritized in a public hospital, and a rule-based model updates several consequence indicators.
 
-Build the complete **front end and interface only**. Our group has not decided the real decision variables, consequences, or rules yet, and every member must be able to contribute to them. Use clearly marked placeholders (Decision A, Option 1, Consequence A, lorem ipsum) and make them easy to replace without editing HTML.
+Build the complete **front end and interface only**. The real decision variables, consequences, or rules have not been decided yet, and every member must be able to contribute to them. Use clearly marked placeholders (Decision A, Option 1, Consequence A, lorem ipsum) and make them easy to replace without editing HTML.
 
 ## 2. Context
 
@@ -172,4 +172,4 @@ Write complete sentences and align the pipes in every Markdown table in the READ
 
 ## 12. Working style
 
-Write clean, commented, beginner-readable code, because non-developers will edit the data and table files. Add no dependencies. When done, summarize what was built, how to run it, and any decision that deviates from this prompt.
+Write clean, commented, beginner-readable code, because everyone will edit the data and table files. Add no dependencies. When done, summarize what was built, how to run it, and any decision that deviates from this prompt.
