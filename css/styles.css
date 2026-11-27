@@ -156,7 +156,8 @@ section { padding: 76px 0; }
 .delta { display: block; min-height: 1.2em; font-size: .78rem; font-weight: 700; color: transparent; }
 .delta.up { color: #25774a; }
 .delta.down { color: #b3402f; }
-.results { margin-top: 26px; display: grid; gap: 26px; }
+.results { margin-top: 26px; display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: start; }
+.results-col { display: grid; gap: 26px; }
 .results h2 { font-size: 1.2rem; margin-bottom: 14px; }
 .results table { min-width: 0; }
 .results td:first-child { white-space: nowrap; width: 1%; font-weight: 600; }
@@ -218,6 +219,7 @@ td a { font-weight: 600; word-break: break-word; }
   .sim-col-sticky { position: static; }
   .g3, .g4 { grid-template-columns: repeat(2, 1fr); }
   .g5 { grid-template-columns: repeat(3, 1fr); }
+  .results { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
   body { font-size: 16px; }

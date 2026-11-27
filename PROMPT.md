@@ -16,7 +16,7 @@ Build the complete **front end and interface only**. Our group has not decided t
 - Our scenario is **Healthcare Prioritization**: patient prioritization in a public hospital. The group has five members.
 - Members: Karol Anne F. Panaligan, Mickole S. Malgapo, Marianne Sabio, Don Pancho, and Jose Eden. Jose is the only developer.
 - Hosting: **GitHub Pages**, from a public repository in the `healthcareprio` organization, served at `https://healthcareprio.github.io/`. There is no server and no database.
-- Do not use the phrase "AI-assisted" anywhere in the site. Do not mention any university name in the site or the README.
+- The course describes the scenario as "AI-assisted patient prioritization in a public hospital", so the Scenario overview heading on Home uses the phrase "AI-assisted". Do not mention any university name in the site or the README.
 
 ### Course requirements that constrain the build
 
@@ -155,7 +155,7 @@ Write complete sentences and align the pipes in every Markdown table. Use "➜" 
 - Editing only the Markdown files changes the matching tables with no HTML edit.
 - Keyboard-only use works end to end, and focus is always visible.
 - No serif fonts, no emoji, no gradient text, and no sparkle icons anywhere.
-- No mention of any university name or the phrase "AI-assisted" anywhere in the site or README.
+- No mention of any university name anywhere in the site or README.
 - The layout has no horizontal scroll at 360px (tables scroll inside their own container).
 - No real triage logic, clinical rules, or medical claims are implemented.
 
