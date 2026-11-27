@@ -48,7 +48,8 @@
 
   document.querySelectorAll("[data-table]").forEach(function (el) {
     var path = el.getAttribute("data-table");
-    fetch(path)
+    /* "no-cache" makes the browser re-check the file, so edits to a table show up right away. */
+    fetch(path, { cache: "no-cache" })
       .then(function (r) { if (!r.ok) { throw new Error(r.status); } return r.text(); })
       .then(function (md) { var t = parse(md); if (t) { render(el, t); } else { fail(el, path); } })
       .catch(function () { fail(el, path); });
