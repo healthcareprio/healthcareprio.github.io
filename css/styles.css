@@ -247,6 +247,11 @@ td a { font-weight: 600; word-break: break-word; }
   .gauges { grid-template-columns: repeat(2, 1fr); }
   .site-footer .cols { grid-template-columns: 1fr; gap: 28px; }
 }
+/* Small phones: stack the hero buttons, centered, with the same width. */
+@media (max-width: 480px) {
+  .hero-actions { flex-direction: column; align-items: center; }
+  .hero-actions .btn { width: min(100%, 320px); justify-content: center; }
+}
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
