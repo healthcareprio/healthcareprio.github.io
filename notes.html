@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=33">
+  <link rel="stylesheet" href="css/styles.css?v=34">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -112,9 +112,10 @@
             <li>Transparency</li>
             <li>Where it runs</li>
           </ul>
-          <p>The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions to react to. The group can keep, change, or replace any of them.</p>
           <p>File to edit: <code>02-notes-decision-variables-options.xlsx</code></p>
-          <p class="note-box"><strong>Decision variables</strong> are the choices the person using the simulator can change. See the <a href="#questions">FAQ</a> for more details.</p>
+          <p class="note-box"><strong>Decision variables</strong> are the choices the person using the simulator can change. See the <a href="#questions">FAQ</a> for more details.<br>
+            The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
+          </p>
 
           <h3>3. Choose a decision variable</h3>
           <p>After the five decision variables are final, each member chooses the one they are most interested in. Edit the table in the Excel file and fill in the decision variable and the member's name for each row.</p>
@@ -124,7 +125,9 @@
           <h3>4. List the options</h3>
           <p>Each member lists the options for their decision variable in the same table, under Option 1, Option 2, and Option 3. The course asks for at least two meaningful options for each. Write each option so it is clear what the hospital would do, because the rules in the next step are written per option.</p>
           <p>File to edit: <code>02-notes-decision-variables-options.xlsx</code></p>
-          <p class="note-box"><strong>Options</strong> are values that a decision variable can take. See the <a href="#questions">FAQ</a> for more details.</p>
+          <p class="note-box"><strong>Options</strong> are values that a decision variable can take. See the <a href="#questions">FAQ</a> for more details.<br>
+          The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
+          </p>
           <div data-table="assets/tables/02-notes-decision-variables-options.xlsx"></div>
           
           <h3>5. Update the rules</h3>
@@ -140,7 +143,7 @@ Course concept:     Responsible innovation, accountability
 Assumption:         Staff have no other way to see the score logic.
 Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
           <p>A rule card covers what the grader looks for on the How the Model Works page: what the rule does, the evidence, how the weight was set, the course concept, and any assumption. The numbers then go into <code>js/model-config.js</code> and the justification into <code>assets/tables/rules.xlsx</code>.</p>
-          <p>Interactions are written by the members who own the two decisions involved. The group picks the four pairs first, using the process in <a href="#decisions">How decisions could be made</a>.</p>
+          <p>Interactions are written by the members who own the two decision variables involved. The group picks the four pairs first, using the process in <a href="#agreement">Ground rules</a>.</p>
 
           <h3>6. Create the video</h3>
           <p>Record a 10 to 12 minute video with every member on camera. Each member presents the part they own.<br>
@@ -160,7 +163,7 @@ Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
         
         <section id="questions">
           <h2>3. FAQ</h2>
-          <div data-table="assets/tables/02-notes-faq.xlsx"></div>
+          <div data-table="assets/tables/03-notes-faq.xlsx"></div>
         </section>
 
         <section id="model">
@@ -169,30 +172,30 @@ Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
 
           <h3>Sample decision variables</h3>
           <p>There should be at least five decision variables, each with at least two meaningful options.</p>
-          <div data-table="assets/tables/03-notes-sample-decisions.xlsx"></div>
+          <div data-table="assets/tables/10-notes-sample-decisions.xlsx"></div>
 
           <h3>Sample consequences</h3>
           <p>There should be at least five consequence indicators, and they must cover equity, governance, and sustainability.<br>
             The "Dimension" column shows which of those areas an indicator covers. Indicators that cover something else are marked as other.</p>
-          <div data-table="assets/tables/04-notes-sample-indicators.xlsx"></div>
+          <div data-table="assets/tables/11-notes-sample-indicators.xlsx"></div>
 
           <h3>Sample interactions</h3>
           <p>There should be at least four interactions, each using a different pair of decisions.</p>
-          <div data-table="assets/tables/05-notes-sample-interactions.xlsx"></div>
+          <div data-table="assets/tables/12-notes-sample-interactions.xlsx"></div>
           <p class="note-line">All four use different pairs of decisions, as required.</p>
 
           <h3>Sample sources</h3>
           <p>Please open and confirm each source before citing it.</p>
-          <div data-table="assets/tables/06-notes-sample-sources.xlsx"></div>
+          <div data-table="assets/tables/13-notes-sample-sources.xlsx"></div>
 
         </section>
 
-        <section id="decisions">
-          <h2>5. How decisions could be made</h2>
+        <section id="agreement">
+          <h2>5. Ground rules</h2>
           <p>A light process can keep the group moving:</p>
           <ol>
-            <li><strong>The owner proposes.</strong> The member who owns a decision writes its options and rules.</li>
-            <li><strong>A 48-hour window.</strong> The group can respond in the chat, and silence counts as agreement.</li>
+            <li><strong>The decision variable owner proposes.</strong> The member who owns a decision variable writes its options and rules.</li>
+            <li><strong>A 48-hour window (can be changed).</strong> The group can respond in the chat, and silence counts as agreement.</li>
             <li><strong>Disagreements.</strong> A short 15-minute call. If the group is still stuck, the team leader decides.</li>
             <li><strong>A scope freeze.</strong> Once the group agrees on the scope, later changes only fix errors instead of adding ideas.</li>
             <li><strong>One shared document</strong> is the source of truth. The chat is for talking, and the document is for decisions.</li>

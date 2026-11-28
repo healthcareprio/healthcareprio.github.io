@@ -270,13 +270,13 @@ td a { font-weight: 600; word-break: break-word; }
 .notes code { background: #eaf0f4; padding: 1px 6px; border-radius: 6px; font-size: .88em; }
 .notes pre { background: var(--navy); color: #d6e4f0; padding: 18px 22px; border-radius: 12px; overflow-x: auto; font-size: .86rem; line-height: 1.65; margin: 0 0 1em; }
 .notes .note-line { margin-top: 14px; font-size: .95rem; }
-.t-03-notes-sample-decisions th:nth-child(1), .t-04-notes-sample-indicators th:nth-child(1), .t-05-notes-sample-interactions th:nth-child(1) { width: 8%; }
-.t-03-notes-sample-decisions th:nth-child(2) { width: 20%; }
-.t-03-notes-sample-decisions th:nth-child(3) { width: 40%; }
+.t-10-notes-sample-decisions th:nth-child(1), .t-11-notes-sample-indicators th:nth-child(1), .t-12-notes-sample-interactions th:nth-child(1) { width: 8%; }
+.t-10-notes-sample-decisions th:nth-child(2) { width: 20%; }
+.t-10-notes-sample-decisions th:nth-child(3) { width: 40%; }
 .t-notes-grading th:nth-child(2) { width: 12%; }
-.t-05-notes-sample-interactions th:nth-child(2) { width: 20%; }
-.t-05-notes-sample-interactions th:nth-child(3) { width: 40%; }
-.t-03-notes-sample-decisions table, .t-04-notes-sample-indicators table, .t-05-notes-sample-interactions table, .t-notes-grading table { table-layout: fixed; min-width: 640px; }
+.t-12-notes-sample-interactions th:nth-child(2) { width: 20%; }
+.t-12-notes-sample-interactions th:nth-child(3) { width: 40%; }
+.t-10-notes-sample-decisions table, .t-11-notes-sample-indicators table, .t-12-notes-sample-interactions table, .t-notes-grading table { table-layout: fixed; min-width: 640px; }
 @media (max-width: 960px) {
   .notes-layout { grid-template-columns: 1fr; gap: 24px; }
   .toc { position: static; padding: 16px 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); }
