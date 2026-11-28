@@ -304,3 +304,8 @@ td a { font-weight: 600; word-break: break-word; }
 .notes .mark-list { list-style: none; padding-left: 0; }
 .notes .mark-list li { padding-left: 0; }
 .notes .mark-list li span { margin-right: .4em; }
+
+.toc { max-height: calc(100vh - 110px); overflow-y: auto; scrollbar-width: thin; }
+.toc li.sub a { padding-left: 28px; font-size: .86rem; }
+.notes h3 { scroll-margin-top: 92px; }
+@media (max-width: 900px) { .toc { max-height: none; overflow: visible; } }

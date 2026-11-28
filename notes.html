@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=26">
+  <link rel="stylesheet" href="css/styles.css?v=27">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -38,16 +38,7 @@
 
       <aside class="toc" aria-label="On this page">
         <b>On this page</b>
-        <ol>
-          <li><a href="#scenario">1. The scenario</a></li>
-          <li><a href="#open-questions">2. Start Here</a></li>
-          <li><a href="#questions">Questions and answers</a></li>
-          <li><a href="#grading">What is graded</a></li>
-          <li><a href="#model">Starter model</a></li>
-          <li><a href="#share-work">Suggested ways to share the work</a></li>
-          <li><a href="#video">Video outline</a></li>
-          <li><a href="#decisions">How decisions could be made</a></li>
-        </ol>
+        <ol id="toc-list"></ol>
       </aside>
 
       <article class="notes">
@@ -87,15 +78,6 @@
             <li>Sensitive health data being fed to the AI.</li>
             <li>The computing and energy cost of running the AI.</li>
           </ul>
-
-          <h3>8. References</h3>
-          <p>The reference repositories collected so far are mostly <strong>emergency-department (ED) triage or queue systems</strong>:</p>
-          <div data-table="assets/tables/notes-reference-projects.xlsx"></div>
-          <p style="margin-top:18px">Notes:</p>
-          <ol>
-            <li><strong>None of them report evaluation results or ethics analysis.</strong> They are engineering demos. Our strength can be the ethics reasoning, which carries 30% of the grade.</li>
-            <li>Several of them (HospitalSim, PatientSim, the PMC paper) are about simulated <em>patients</em> for training, not about prioritizing real queues. They are best cited as background only.</li>
-          </ol>
 
           <h3>Proposed setting</h3>
           <blockquote>A public hospital emergency department in the Philippines uses an AI-assisted tool to rank waiting patients.</blockquote>
@@ -217,6 +199,17 @@ Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
           </ol>
         </section>
 
+        <section id="references">
+          <h2>References</h2>
+          <p>The reference repositories collected so far are mostly <strong>emergency-department (ED) triage or queue systems</strong>:</p>
+          <div data-table="assets/tables/notes-reference-projects.xlsx"></div>
+          <p style="margin-top:18px">Notes:</p>
+          <ol>
+            <li><strong>None of them report evaluation results or ethics analysis.</strong> They are engineering demos. Our strength can be the ethics reasoning, which carries 30% of the grade.</li>
+            <li>Several of them (HospitalSim, PatientSim, the PMC paper) are about simulated <em>patients</em> for training, not about prioritizing real queues. They are best cited as background only.</li>
+          </ol>
+        </section>
+
       </article>
     </div>
   </section>
@@ -225,29 +218,54 @@ Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
 <script src="assets/vendor/xlsx.full.min.js"></script>
 <script src="js/tables.js?v=16"></script>
 <script>
-  /* Highlights the table-of-contents link for the section currently being read. */
+  /* Builds the "On this page" list from the h2 and h3 headings, and highlights the one being read. */
   (function () {
-    var links = Array.prototype.slice.call(document.querySelectorAll(".toc a[href^='#']"));
-    var sections = links.map(function (a) { return document.getElementById(a.getAttribute("href").slice(1)); });
-    var ticking = false;
+    var list = document.getElementById("toc-list");
+    var heads = Array.prototype.slice.call(document.querySelectorAll(".notes h2, .notes h3"));
+    var used = {};
+    var items = heads.map(function (h) {
+      var isH2 = h.tagName === "H2";
+      var id;
+      if (isH2 && h.parentElement.id) {
+        id = h.parentElement.id;
+      } else {
+        id = h.id || h.textContent.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+        while (used[id] || document.getElementById(id)) { id += "-x"; }
+        h.id = id;
+      }
+      used[id] = true;
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.href = "#" + id;
+      a.textContent = h.textContent;
+      if (!isH2) { li.className = "sub"; }
+      li.appendChild(a);
+      list.appendChild(li);
+      return { heading: h, link: a };
+    });
 
+    var ticking = false;
     function update() {
       ticking = false;
       var current = 0;
       var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
       if (atBottom) {
-        current = sections.length - 1;
+        current = items.length - 1;
       } else {
-        sections.forEach(function (s, i) {
-          if (s && s.getBoundingClientRect().top <= 130) { current = i; }
+        items.forEach(function (it, i) {
+          if (it.heading.getBoundingClientRect().top <= 130) { current = i; }
         });
       }
-      links.forEach(function (a, i) {
-        if (i === current) { a.classList.add("active"); a.setAttribute("aria-current", "true"); }
-        else { a.classList.remove("active"); a.removeAttribute("aria-current"); }
+      items.forEach(function (it, i) {
+        if (i === current) { it.link.classList.add("active"); it.link.setAttribute("aria-current", "true"); }
+        else { it.link.classList.remove("active"); it.link.removeAttribute("aria-current"); }
       });
+      var act = items[current] && items[current].link;
+      if (act && list.parentElement.scrollHeight > list.parentElement.clientHeight) {
+        var box = list.parentElement, top = act.offsetTop;
+        if (top < box.scrollTop || top > box.scrollTop + box.clientHeight - 40) { box.scrollTop = top - 60; }
+      }
     }
-
     function onScroll() {
       if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
     }
