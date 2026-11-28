@@ -173,7 +173,7 @@ section { padding: 76px 0; }
 .results td:first-child { white-space: nowrap; width: 1%; font-weight: 600; }
 .effect-list { list-style: none; margin: 0; padding: 0; }
 .effect-list li { padding: 1px 0; }
-td ul { margin: .35em 0; padding-left: 1.2em; }
+td ul { margin: .35em 0 .8em; padding-left: 1.2em; }
 td ul li { padding: 1px 0; }
 td ul:first-child { margin-top: 0; }
 td ul:last-child { margin-bottom: 0; }
