@@ -2,6 +2,7 @@
 
    Usage in any page (load assets/vendor/xlsx.full.min.js and site.js first):
        <div data-table="assets/tables/rules.xlsx"></div>
+   Add data-columns="3" to the div to show only the first 3 columns.
 
    How the Excel files are read:
      - Only the FIRST sheet is used. Row 1 is the header row.
@@ -72,6 +73,11 @@
   }
 
   function render(el, t) {
+    /* data-columns="3" shows only the first 3 columns of the file. */
+    var limit = parseInt(el.getAttribute("data-columns"), 10);
+    if (limit > 0) {
+      t = { head: t.head.slice(0, limit), rows: t.rows.map(function (r) { return r.slice(0, limit); }) };
+    }
     var name = el.getAttribute("data-table").split("/").pop().replace(/\.xlsx$/, "");
     el.innerHTML = '<div class="table-wrap t-' + esc(name) + '"><table><thead><tr>' +
       t.head.map(function (h) { return "<th>" + h + "</th>"; }).join("") + "</tr></thead><tbody>" +
