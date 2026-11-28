@@ -191,7 +191,7 @@ Every table on the site is an Excel file in `assets/tables/`. You edit the file 
 | `rules.xlsx`                               | How the Model Works | Effect, evidence, and weight for every option |
 | `interactions.xlsx`                        | How the Model Works | The pairs of decisions that change a result   |
 | `40-references-online-references.xlsx`     | References          | Online sources                                |
-| `41-references-declaraions-of-ai-use.xlsx` | References          | Declaration of AI use                         |
+| `41-references-declarations-of-ai-use.xlsx` | References          | Declaration of AI use                         |
 | `42-references-contributions.xlsx`         | References          | Who did what                                  |
 | `43-references-design-inspiration.xlsx`    | References          | Design references                             |
 
