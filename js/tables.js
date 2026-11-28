@@ -8,6 +8,7 @@
      - Press Alt+Enter inside a cell to start a new line.
      - A cell with an Excel hyperlink becomes a link. You can also type
        [link text](https://example.com) inside a cell.
+     - Text between double asterisks, like **this**, is shown in bold.
      - Any cell that contains "to be added" is shown in grey italics.
    The file name becomes a CSS class (rules.xlsx -> t-rules) for column widths. */
 
@@ -15,6 +16,7 @@
   function inline(text) {
     var s = esc(text);
     s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
     s = s.replace(/&lt;br\s*\/?&gt;/gi, "<br>");
     return s.replace(/\r?\n/g, "<br>");
   }
