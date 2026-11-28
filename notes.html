@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=24">
+  <link rel="stylesheet" href="css/styles.css?v=25">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -52,26 +52,19 @@
 
       <article class="notes">
 
-        <section id="open-questions">
-          <h2>1. Starting Point</h2>
-          <p>These are the points we still need to agree on.</p>
-          <div data-table="assets/tables/01-notes-starting-point.xlsx"></div>
-          <p class="note-line">The site lives at <code>https://healthcareprio.github.io/</code>.</p>
-        </section>
-
-        <section id="questions">
-          <h2>Questions and answers</h2>
-          <p>Some questions that may come up while we plan, with suggested answers.</p>
-          <div data-table="assets/tables/notes-faq.xlsx"></div>
-        </section>
-
         <section id="scenario">
-          <h2>The scenario</h2>
+          <h2>1. The scenario</h2>
           <p>The course describes the scenario in one line: <strong>"AI-assisted patient prioritization in a public hospital."</strong> That means:</p>
           <ul>
-            <li>A hospital has more patients than staff, beds, or time. Someone or something must decide <strong>who is seen first</strong>.</li>
-            <li>An <strong>AI system helps make that decision</strong> by ranking or scoring patients. Humans may or may not stay in the loop.</li>
-            <li>The ethical question is not "is the AI accurate?" It is: <strong>what trade-offs does each design choice create</strong> for fairness, accountability, privacy, sustainability, and staff?</li>
+            <li>A hospital has more patients than staff, beds, or time.</li>
+            <li>Someone or something must decide <strong>who is seen first</strong>.</li>
+            <li>An <strong>AI system helps make that decision</strong> by ranking or scoring patients.</li>
+            <li>Humans may or may not stay in the loop.</li>
+          </ul>
+          <p>The ethical question:</p>
+          <ul class="mark-list">
+            <li><span aria-label="Not the question">❌</span> "Is the AI accurate?"</li>
+            <li><span aria-label="The question">✅</span> <strong>What trade-offs does each design choice create</strong> for fairness, accountability, privacy, sustainability, and staff?</li>
           </ul>
           <p>It can be framed as triage, but we are not building a medical tool. We are building a <strong>model of ethical trade-offs</strong>. The simulator illustrates trade-offs and does not predict real outcomes.</p>
 
@@ -99,6 +92,19 @@
             <li>The Philippine context lets us cite local law (the Data Privacy Act) and DOH policy.</li>
             <li>It is concrete enough for realistic decisions, and simple enough that no medical expertise is needed.</li>
           </ul>
+        </section>
+
+        <section id="open-questions">
+          <h2>2. Start Here</h2>
+          <p>These are the points we still need to agree on.</p>
+          <div data-table="assets/tables/01-notes-starting-point.xlsx"></div>
+          <p class="note-line">The site lives at <code>https://healthcareprio.github.io/</code>.</p>
+        </section>
+        
+        <section id="questions">
+          <h2>Questions and answers</h2>
+          <p>Some questions that may come up while we plan, with suggested answers.</p>
+          <div data-table="assets/tables/notes-faq.xlsx"></div>
         </section>
 
         <section id="grading">

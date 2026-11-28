@@ -299,3 +299,7 @@ td a { font-weight: 600; word-break: break-word; }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
 }
+
+.notes .mark-list { list-style: none; padding-left: 0; }
+.notes .mark-list li { padding-left: 0; }
+.notes .mark-list li span { margin-right: .4em; }
