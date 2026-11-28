@@ -197,9 +197,11 @@ td .pill { white-space: nowrap; }
 td a { font-weight: 600; word-break: break-word; }
 /* Column widths for the model tables (the class comes from the .md file name). */
 .t-rules table, .t-interactions table { table-layout: fixed; min-width: 760px; }
-.t-rules th:nth-child(1) { width: 15%; }
-.t-rules th:nth-child(2) { width: 22%; }
-.t-rules th:nth-child(3), .t-rules th:nth-child(4) { width: 31.5%; }
+.t-rules th:nth-child(1) { width: 12%; }
+.t-rules th:nth-child(2) { width: 20%; }
+.t-rules th:nth-child(3) { width: 22%; }
+.t-rules th:nth-child(4) { width: 20%; }
+.t-rules th:nth-child(5), .t-rules th:nth-child(6) { width: 13%; }
 .t-interactions th:nth-child(1) { width: 13%; }
 .t-interactions th:nth-child(2) { width: 24%; }
 .t-interactions th:nth-child(3) { width: 21%; }

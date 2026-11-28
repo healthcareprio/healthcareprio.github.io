@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=34">
+  <link rel="stylesheet" href="css/styles.css?v=35">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -132,17 +132,9 @@
           
           <h3>5. Update the rules</h3>
           <p>Next, each member writes the rules for their decision variable: what each option does to the consequences, and why.<br>
-            Each rule can be written as a <strong>rule card</strong>, one per rule, either in a shared doc or directly in the Excel table (<code>rules.xlsx</code>):</p>
-<pre>Rule ID:            R-D4-02
-IF (decision):      Transparency = Black box
-THEN (indicator):   Accountability   -15
-BECAUSE:            Nobody can inspect or contest an unexplained ranking.
-Source:             WHO 2021 guidance, section on transparency (verify link)
-How weight was set: Large effect (-15) because it removes the ability to appeal.
-Course concept:     Responsible innovation, accountability
-Assumption:         Staff have no other way to see the score logic.
-Written by:         &lt;name&gt;      Reviewed by: &lt;name&gt;</pre>
-          <p>A rule card covers what the grader looks for on the How the Model Works page: what the rule does, the evidence, how the weight was set, the course concept, and any assumption. The numbers then go into <code>js/model-config.js</code> and the justification into <code>assets/tables/rules.xlsx</code>.</p>
+            Add one row per option in the rules table. Fill in the effect on the consequences, the evidence, how the weight was set, the course concept, and any assumption.<br>
+            The numbers also need to be entered in <code>js/model-config.js</code>, which the simulator uses.</p>
+          <p>File to edit: <code>rules.xlsx</code></p>
           <p>Interactions are written by the members who own the two decision variables involved. The group picks the four pairs first, using the process in <a href="#agreement">Ground rules</a>.</p>
 
           <h3>6. Create the video</h3>
