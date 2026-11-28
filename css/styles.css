@@ -258,6 +258,7 @@ td a { font-weight: 600; word-break: break-word; }
 .toc ol { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--line); }
 .toc a { display: block; padding: 6px 0 6px 14px; margin-left: -2px; border-left: 2px solid transparent; color: var(--ink-soft); text-decoration: none; }
 .toc a:hover { color: var(--teal-dark); border-left-color: var(--teal); }
+.toc a.active { color: var(--teal-dark); border-left-color: var(--teal); font-weight: 600; }
 .notes section { padding: 0 0 52px; scroll-margin-top: 92px; }
 .notes h2 { margin-bottom: .6em; }
 .notes h3 { margin: 1.8em 0 .5em; font-size: 1.15rem; }
