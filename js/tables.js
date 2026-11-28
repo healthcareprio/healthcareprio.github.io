@@ -7,7 +7,8 @@
      - Only the FIRST sheet is used. Row 1 is the header row.
      - Press Alt+Enter inside a cell to start a new line.
      - A cell with an Excel hyperlink becomes a link. You can also type
-       [link text](https://example.com) inside a cell.
+       [link text](https://example.com) inside a cell. Use [link text](#section-id)
+       to link to a section on the same page.
      - Lines that start with "- " are shown as bullet points.
      - Text between double asterisks, like **this**, is shown in bold.
      - Any cell that contains "to be added" is shown in grey italics.
@@ -17,6 +18,7 @@
   function inline(text) {
     var s = esc(text);
     s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    s = s.replace(/\[([^\]]+)\]\((#[A-Za-z0-9_-]+)\)/g, '<a href="$2">$1</a>');
     s = s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
     s = s.replace(/&lt;br\s*\/?&gt;/gi, "<br>");
     /* Lines that start with "- " become a bullet list; other lines are joined with line breaks. */
