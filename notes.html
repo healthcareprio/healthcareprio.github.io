@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=35">
+  <link rel="stylesheet" href="css/styles.css?v=38">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -90,7 +90,7 @@
 
           <h3>1. Decide on the setting</h3>
           <p>Start with where the scenario takes place, because the decisions and consequences depend on it.</p>
-          <div data-table="assets/tables/01-notes-decide-on-the-setting.xlsx"></div>
+          <div data-table="assets/tables/01-decide-on-the-setting.xlsx"></div>
 
           <p style="margin-top:32px">Proposed setting:</p>
           <blockquote>A public hospital emergency department in the Philippines uses an AI-assisted tool to rank waiting patients.
@@ -112,32 +112,54 @@
             <li>Transparency</li>
             <li>Where it runs</li>
           </ul>
-          <p>File to edit: <code>02-notes-decision-variables-options.xlsx</code></p>
+          <p>File to edit: <code>02-decision-variables-options.xlsx</code></p>
           <p class="note-box"><strong>Decision variables</strong> are the choices the person using the simulator can change. See the <a href="#questions">FAQ</a> for more details.<br>
             The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
           </p>
 
-          <h3>3. Choose a decision variable</h3>
-          <p>After the five decision variables are final, each member chooses the one they are most interested in. Edit the table in the Excel file and fill in the decision variable and the member's name for each row.</p>
-          <p>File to edit: <code>02-notes-decision-variables-options.xlsx</code></p>
-          <div data-table="assets/tables/02-notes-decision-variables-options.xlsx" data-columns="3"></div>
+          <h3>3. Finalize consequences/indicators</h3>
+          <p>This is normally done together with deciding on the final decision variables. The course asks for at least five consequences, and they must cover equity, governance, and sustainability.</p>
+          <p>Sample consequences:</p>
+          <ul>
+            <li>Fairness of access</li>
+            <li>Accountability</li>
+            <li>Energy and environmental cost</li>
+            <li>Patient privacy</li>
+            <li>Clinical safety</li>
+          </ul>
+          <p>The indicators table lists what each consequence measures. It depends only on the scenario and the setting, and it doesn't depend on the options.</p>
+          <p>File to edit: <code>03-indicators.xlsx</code></p>
+          <p class="note-box"><strong>Consequences</strong>, also called indicators, are the scores from 0 to 100 that change when the decisions change. See the <a href="#questions">FAQ</a> for more details.<br>
+            The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
+          </p>
 
-          <h3>4. List the options</h3>
+          <h3>4. Choose a decision variable</h3>
+          <p>After the five decision variables are final, each member chooses the one they are most interested in. Edit the table in the Excel file and fill in the decision variable and the member's name for each row.</p>
+          <p>File to edit: <code>02-decision-variables-options.xlsx</code></p>
+          <div data-table="assets/tables/02-decision-variables-options.xlsx" data-columns="3"></div>
+
+          <h3>5. List the options</h3>
           <p>Each member lists the options for their decision variable in the same table, under Option 1, Option 2, and Option 3. The course asks for at least two meaningful options for each. Write each option so it is clear what the hospital would do, because the rules in the next step are written per option.</p>
-          <p>File to edit: <code>02-notes-decision-variables-options.xlsx</code></p>
+          <p>File to edit: <code>02-decision-variables-options.xlsx</code></p>
           <p class="note-box"><strong>Options</strong> are values that a decision variable can take. See the <a href="#questions">FAQ</a> for more details.<br>
           The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
           </p>
-          <div data-table="assets/tables/02-notes-decision-variables-options.xlsx"></div>
+          <div data-table="assets/tables/02-decision-variables-options.xlsx"></div>
           
-          <h3>5. Update the rules</h3>
+          <h3>6. Update the rules</h3>
           <p>Next, each member writes the rules for their decision variable: what each option does to the consequences, and why.<br>
             Add one row per option in the rules table. Fill in the effect on the consequences, the evidence, how the weight was set, the course concept, and any assumption.<br>
             The numbers also need to be entered in <code>js/model-config.js</code>, which the simulator uses.</p>
-          <p>File to edit: <code>rules.xlsx</code></p>
-          <p>Interactions are written by the members who own the two decision variables involved. The group picks the four pairs first, using the process in <a href="#agreement">Ground rules</a>.</p>
+          <p>File to edit: <code>04-rules.xlsx</code></p>
+          <h3>7. Update the interactions</h3>
+          <p>Interactions are written by the members who own the two decision variables involved. The group picks the four pairs first, using the process in <a href="#agreement">Ground rules</a>.<br>
+            Each interaction applies when a specific pair of options is chosen, and it also changes the consequences. So it comes after the options and consequences are listed.</p>
+          <p>File to edit: <code>05-interactions.xlsx</code></p>
+          <p class="note-box">An <strong>interaction</strong> is when the effect of one decision depends on another decision. See the <a href="#questions">FAQ</a> for more details.<br>
+            The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
+          </p>
 
-          <h3>6. Create the video</h3>
+          <h3>8. Create the video</h3>
           <p>Record a 10 to 12 minute video with every member on camera. Each member presents the part they own.<br>
             The video follows this order:</p>
           <ol>
@@ -147,7 +169,7 @@
             <li>Ethical insights and limitations: who gains, who loses, and what the model cannot capture (everyone, one sentence each).</li>
           </ol>
 
-          <h3>7. Update the website</h3>
+          <h3>9. Update the website</h3>
           <p>Update the site with what the group agreed, then check every page.<br>
             Each member adds their references to the References page and records their work in the "Who did what" table. The site lives at <code>https://healthcareprio.github.io/</code>.</p>
 
@@ -155,7 +177,7 @@
         
         <section id="questions">
           <h2>3. FAQ</h2>
-          <div data-table="assets/tables/03-notes-faq.xlsx"></div>
+          <div data-table="assets/tables/36-faq.xlsx"></div>
         </section>
 
         <section id="model">
@@ -164,21 +186,21 @@
 
           <h3>Sample decision variables</h3>
           <p>There should be at least five decision variables, each with at least two meaningful options.</p>
-          <div data-table="assets/tables/10-notes-sample-decisions.xlsx"></div>
+          <div data-table="assets/tables/30-sample-decisions.xlsx"></div>
 
           <h3>Sample consequences</h3>
           <p>There should be at least five consequence indicators, and they must cover equity, governance, and sustainability.<br>
             The "Dimension" column shows which of those areas an indicator covers. Indicators that cover something else are marked as other.</p>
-          <div data-table="assets/tables/11-notes-sample-indicators.xlsx"></div>
+          <div data-table="assets/tables/31-sample-indicators.xlsx"></div>
 
           <h3>Sample interactions</h3>
           <p>There should be at least four interactions, each using a different pair of decisions.</p>
-          <div data-table="assets/tables/12-notes-sample-interactions.xlsx"></div>
+          <div data-table="assets/tables/32-sample-interactions.xlsx"></div>
           <p class="note-line">All four use different pairs of decisions, as required.</p>
 
           <h3>Sample sources</h3>
           <p>Please open and confirm each source before citing it.</p>
-          <div data-table="assets/tables/13-notes-sample-sources.xlsx"></div>
+          <div data-table="assets/tables/33-sample-sources.xlsx"></div>
 
         </section>
 
@@ -196,7 +218,7 @@
 
         <section id="grading">
           <h2>6. What is graded</h2>
-          <div data-table="assets/tables/notes-grading.xlsx"></div>
+          <div data-table="assets/tables/34-grading.xlsx"></div>
           <p style="margin-top:18px">The website is the easier part. Ethical reasoning and model quality carry <strong>60% of
               the grade</strong>, so ideas and evidence are the most valuable contribution.</p>
           <p>Requirements to keep in view</p>
@@ -213,9 +235,9 @@
         </section>
 
         <section id="references">
-          <h2>7. References</h2>
+          <h2>7. Project References</h2>
           <p>The reference repositories collected so far are mostly <strong>emergency-department (ED) triage or queue systems</strong>:</p>
-          <div data-table="assets/tables/notes-reference-projects.xlsx"></div>
+          <div data-table="assets/tables/35-reference-projects.xlsx"></div>
           <p style="margin-top:18px">Notes:</p>
           <ol>
             <li><strong>None of them report evaluation results or ethics analysis.</strong> They are engineering demos. Our strength can be the ethics reasoning, which carries 30% of the grade.</li>
@@ -229,7 +251,7 @@
 </main>
 <script src="js/site.js?v=20"></script>
 <script src="assets/vendor/xlsx.full.min.js"></script>
-<script src="js/tables.js?v=18"></script>
+<script src="js/tables.js?v=19"></script>
 <script>
   /* Builds the "On this page" list from the h2 and h3 headings, and highlights the one being read. */
   (function () {

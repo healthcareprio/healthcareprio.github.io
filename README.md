@@ -179,21 +179,21 @@ Notes on how the scores work:
 - Each selected option adds its effect to the indicators.
 - Matching interactions add extra effects.
 - The final score is capped between 0 and 100.
-- After you change a number in `js/model-config.js`, update the matching row in `assets/tables/rules.xlsx` or `assets/tables/interactions.xlsx` so the How the Model Works page stays accurate.
+- After you change a number in `js/model-config.js`, update the matching row in `assets/tables/04-rules.xlsx` or `assets/tables/05-interactions.xlsx` so the How the Model Works page stays accurate.
 
 ## Edit and upload table files
 
 Every table on the site is an Excel file in `assets/tables/`. You edit the file in Excel, upload it to the GitHub repository, and the page updates. No HTML changes are needed.
 
-| File                                       | Page                | Content                                       |
-| ------------------------------------------ | ------------------- | --------------------------------------------- |
-| `indicators.xlsx`                          | How the Model Works | What each consequence measures                |
-| `rules.xlsx`                               | How the Model Works | Effect, evidence, and weight for every option |
-| `interactions.xlsx`                        | How the Model Works | The pairs of decisions that change a result   |
-| `40-references-online-references.xlsx`     | References          | Online sources                                |
-| `41-references-declarations-of-ai-use.xlsx` | References          | Declaration of AI use                         |
-| `42-references-contributions.xlsx`         | References          | Who did what                                  |
-| `43-references-design-inspiration.xlsx`    | References          | Design references                             |
+| File                                        | Page                | Content                                       |
+| ------------------------------------------- | ------------------- | --------------------------------------------- |
+| `03-indicators.xlsx`                        | How the Model Works | What each consequence measures                |
+| `04-rules.xlsx`                             | How the Model Works | Effect, evidence, and weight for every option |
+| `05-interactions.xlsx`                      | How the Model Works | The pairs of decisions that change a result   |
+| `20-references-online-references.xlsx`      | References          | Online sources                                |
+| `21-references-declarations-of-ai-use.xlsx` | References          | Declaration of AI use                         |
+| `22-references-contributions.xlsx`          | References          | Who did what                                  |
+| `23-references-design-inspiration.xlsx`     | References          | Design references                             |
 
 ### Before you start
 
@@ -209,7 +209,7 @@ Every table on the site is an Excel file in `assets/tables/`. You edit the file 
    https://github.com/healthcareprio/healthcareprio.github.io/tree/master/assets/tables
    ```
 
-2. Click the file you want to edit, for example `rules.xlsx`.
+2. Click the file you want to edit, for example `04-rules.xlsx`.
 3. Click the **Download raw file** button (the download icon at the top right of the file view) and save the file to your computer.
 
 Always download a fresh copy before you start, so you edit the newest version.

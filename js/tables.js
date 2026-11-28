@@ -1,7 +1,7 @@
 /* Loads Excel tables from assets/tables/ and renders them as HTML tables.
 
    Usage in any page (load assets/vendor/xlsx.full.min.js and site.js first):
-       <div data-table="assets/tables/rules.xlsx"></div>
+       <div data-table="assets/tables/04-rules.xlsx"></div>
    Add data-columns="3" to the div to show only the first 3 columns.
 
    How the Excel files are read:
@@ -13,7 +13,7 @@
      - Lines that start with "- " are shown as bullet points.
      - Text between double asterisks, like **this**, is shown in bold.
      - Any cell that contains "to be added" is shown in grey italics.
-   The file name becomes a CSS class (rules.xlsx -> t-rules) for column widths. */
+   The file name becomes a CSS class (04-rules.xlsx -> t-04-rules) for column widths. */
 
 (function () {
   function inline(text) {
