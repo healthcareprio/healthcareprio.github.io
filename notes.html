@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap">
-  <link rel="stylesheet" href="css/styles.css?v=38">
+  <link rel="stylesheet" href="css/styles.css?v=40">
 </head>
 <body data-page="notes">
 <main id="main">
@@ -117,7 +117,7 @@
             The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
           </p>
 
-          <h3>3. Finalize consequences/indicators</h3>
+          <h3>3. Finalize consequences</h3>
           <p>This is normally done together with deciding on the final decision variables. The course asks for at least five consequences, and they must cover equity, governance, and sustainability.</p>
           <p>Sample consequences:</p>
           <ul>
@@ -128,6 +128,7 @@
             <li>Clinical safety</li>
           </ul>
           <p>The indicators table lists what each consequence measures. It depends only on the scenario and the setting, and it doesn't depend on the options.</p>
+          <p>Write each consequence in the "Indicator" column and its dimension (Equity, Governance, Sustainability, or something else) in the "Dimension" column. The simulator and the How the Model Works page both read this table.</p>
           <p>File to edit: <code>03-indicators.xlsx</code></p>
           <p class="note-box"><strong>Consequences</strong>, also called indicators, are the scores from 0 to 100 that change when the decisions change. See the <a href="#questions">FAQ</a> for more details.<br>
             The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
@@ -140,6 +141,7 @@
 
           <h3>5. List the options</h3>
           <p>Each member lists the options for their decision variable in the same table, under Option 1, Option 2, and Option 3. The course asks for at least two meaningful options for each. Write each option so it is clear what the hospital would do, because the rules in the next step are written per option.</p>
+          <p>Write the option name in the cell. To add a short description, press Alt+Enter and write it on the second line of the same cell. The "Description" column holds a short line about the decision variable itself.</p>
           <p>File to edit: <code>02-decision-variables-options.xlsx</code></p>
           <p class="note-box"><strong>Options</strong> are values that a decision variable can take. See the <a href="#questions">FAQ</a> for more details.<br>
           The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.
@@ -149,11 +151,18 @@
           <h3>6. Update the rules</h3>
           <p>Next, each member writes the rules for their decision variable: what each option does to the consequences, and why.<br>
             Add one row per option in the rules table. Fill in the effect on the consequences, the evidence, how the weight was set, the course concept, and any assumption.<br>
-            The numbers also need to be entered in <code>js/model-config.js</code>, which the simulator uses.</p>
+            The simulator reads this table directly, so there is nothing else to update.</p>
+          <ul>
+            <li>In the "Rule" column, write the decision variable and the option like this: <code>Transparency: Black box</code>. Use the exact names from the options table.</li>
+            <li>In the "Effect on the indicators" column, write one effect per line, like <code>Accountability -15</code>. Use the exact consequence names.</li>
+            <li>In the "Who gains and who loses" column, write a short sentence. The simulator shows it.</li>
+          </ul>
           <p>File to edit: <code>04-rules.xlsx</code></p>
+
           <h3>7. Update the interactions</h3>
           <p>Interactions are written by the members who own the two decision variables involved. The group picks the four pairs first, using the process in <a href="#agreement">Ground rules</a>.<br>
             Each interaction applies when a specific pair of options is chosen, and it also changes the consequences. So it comes after the options and consequences are listed.</p>
+          <p>In "Applies when", write each choice on its own line, like <code>Transparency: Black box</code>. In "Extra effect", use the same format as the rules, like <code>Accountability -10</code>. The simulator reads this table directly.</p>
           <p>File to edit: <code>05-interactions.xlsx</code></p>
           <p class="note-box">An <strong>interaction</strong> is when the effect of one decision depends on another decision. See the <a href="#questions">FAQ</a> for more details.<br>
             The <a href="#model">Starter model</a> section has sample decision variables, consequences, and interactions.

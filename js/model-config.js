@@ -1,15 +1,13 @@
 /* ==========================================================================
-   MODEL CONFIG  -  the single place the team edits to define the model.
-   Everything below is PLACEHOLDER. Names, effects and texts are dummy values
-   so the interface can be built before the group decides the real logic.
-   The simulator page reads this file to calculate scores.
+   DEMO MODEL  -  placeholder values used only until the Excel tables are filled in.
 
-   To define the real model:
-     1. Rename decisions / options / indicators (labels and blurbs).
-     2. Replace the numbers in each option's `effects` (points added to an indicator).
-     3. Rewrite the `interactions` (an effect that only applies for a specific pair).
-     4. Update the matching tables in assets/tables/ (03-indicators.xlsx, 04-rules.xlsx,
-        05-interactions.xlsx) so the "How the Model Works" page shows the same numbers.
+   The real model is NOT edited here. The simulator builds it from the Excel files
+   in assets/tables/ (see js/model-loader.js for the exact format):
+     02-decision-variables-options.xlsx, 03-indicators.xlsx,
+     04-rules.xlsx, 05-interactions.xlsx
+   If those files are not filled in yet, the simulator shows this demo model instead.
+
+   The baseline and the category colours below are also used for the real model.
    ========================================================================== */
 
 var MODEL = {

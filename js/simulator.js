@@ -1,6 +1,7 @@
-/* Simulator UI and a generic placeholder engine.
-   The engine only adds up the numbers in model-config.js, so teammates can
-   change the model without touching this file. Requires site.js and model-config.js. */
+/* Simulator UI and a generic engine.
+   The engine only adds up the numbers in the model. The model comes from the Excel
+   tables (see model-loader.js), or from the demo model in model-config.js while the
+   tables are not filled in yet. Requires site.js, model-config.js, and model-loader.js. */
 
 (function () {
   var state = {};
@@ -33,7 +34,7 @@
       var o = optionOf(d, state[d.id]);
       Object.keys(o.effects).forEach(function (k) { scores[k] += o.effects[k]; });
       why.push({ cause: esc(d.label) + " ➜ " + esc(o.label), result: effectText(o.effects) });
-      who.push({ decision: esc(d.label), text: esc(o.who) });
+      who.push({ decision: esc(d.label), text: esc(o.who || "Not described yet.") });
     });
 
     var fired = [];
@@ -75,8 +76,8 @@
           (state[d.id] === o.id ? " checked" : "") + '><label for="' + id + '"><div><b>' + esc(o.label) +
           "</b><span>" + esc(o.blurb) + "</span></div></label></div>";
       }).join("");
-      return '<fieldset class="decision"><legend>' + esc(d.label) + '</legend><p class="hint">' + esc(d.hint) +
-        '</p><div class="options">' + opts + "</div></fieldset>";
+      return '<fieldset class="decision"><legend>' + esc(d.label) + '</legend>' + (d.hint ? '<p class="hint">' + esc(d.hint) + "</p>" : "") +
+        '<div class="options">' + opts + "</div></fieldset>";
     }).join("");
   }
 
@@ -112,15 +113,41 @@
     document.getElementById("trade").innerHTML = table(["Measure", "Result"], r.trade, ["measure", "result"]);
   }
 
-  reset();
-  buildDecisions();
-  buildGauges();
-  render();
+  /* Tells the team when the Excel tables could not be used as written. */
+  function showStatus(result) {
+    var el = document.getElementById("model-status");
+    if (!el || (!result.usedDemo && !result.issues.length)) { return; }
+    var html = "<span>";
+    if (result.usedDemo) {
+      html += "<b>Placeholder values.</b> " + esc(result.reason) + " The simulator is showing demo values until the Excel tables are filled in.";
+    } else {
+      html += "<b>Some rows in the Excel tables could not be used.</b> Please fix them so the simulator is complete.";
+    }
+    if (result.issues.length) {
+      html += "<ul>" + result.issues.slice(0, 8).map(function (m) { return "<li>" + esc(m) + "</li>"; }).join("") +
+        (result.issues.length > 8 ? "<li>And " + (result.issues.length - 8) + " more.</li>" : "") + "</ul>";
+    }
+    el.innerHTML = html + "</span>";
+    el.hidden = false;
+  }
 
-  document.getElementById("decisions").addEventListener("change", function (e) {
-    if (e.target.type === "radio") { state[e.target.name] = e.target.value; render(); }
-  });
-  document.getElementById("reset").addEventListener("click", function () {
-    reset(); buildDecisions(); render();
+  function start() {
+    reset();
+    buildDecisions();
+    buildGauges();
+    render();
+
+    document.getElementById("decisions").addEventListener("change", function (e) {
+      if (e.target.type === "radio") { state[e.target.name] = e.target.value; render(); }
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      reset(); buildDecisions(); render();
+    });
+  }
+
+  ModelLoader.load().then(function (result) {
+    MODEL = result.model;
+    showStatus(result);
+    start();
   });
 })();

@@ -167,7 +167,7 @@ You can rename the local folder to anything you like. Git does not care about th
 
 | File                               | What it controls                                                                                       |
 | ---------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| `js/model-config.js`               | Decisions, options, indicators, effects, and interactions used by the simulator                        |
+| `assets/tables/` (Excel)           | Decisions, options, indicators, effects, and interactions used by the simulator (see below)            |
 | `js/site.js`                       | Site name and the list of team members                                                                 |
 | `index.html`                       | The Home text and the YouTube embed (replace the marked placeholder block)                             |
 | `assets/images/hero.jpg`           | The photo shown in the Home hero (optional)                                                            |
@@ -179,7 +179,18 @@ Notes on how the scores work:
 - Each selected option adds its effect to the indicators.
 - Matching interactions add extra effects.
 - The final score is capped between 0 and 100.
-- After you change a number in `js/model-config.js`, update the matching row in `assets/tables/04-rules.xlsx` or `assets/tables/05-interactions.xlsx` so the How the Model Works page stays accurate.
+- The simulator reads the model directly from four Excel files, so there is nothing to copy into the code. Edit the Excel files and upload them.
+- The same files are shown on the How the Model Works page, so the page and the simulator always agree.
+- Until the files are filled in, the simulator shows a demo model and says so. Problems in the files, such as a rule that names a decision that does not exist, are listed on the Simulator page.
+
+| File                                 | What to write                                                                                                                 |
+| ------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------- |
+| `02-decision-variables-options.xlsx` | One row per decision variable. Put each option in its own cell. A second line in the cell is the description.                 |
+| `03-indicators.xlsx`                 | One row per consequence, with its dimension and what it measures.                                                             |
+| `04-rules.xlsx`                      | One row per option. Write the rule as `Decision variable: Option` and each effect on its own line, like `Accountability -15`. |
+| `05-interactions.xlsx`               | Write each choice on its own line under "Applies when", and the effect in the same format as the rules.                       |
+
+Use the exact decision, option, and indicator names everywhere, and avoid commas inside a name.
 
 ## Edit and upload table files
 
@@ -187,6 +198,7 @@ Every table on the site is an Excel file in `assets/tables/`. You edit the file 
 
 | File                                        | Page                | Content                                       |
 | ------------------------------------------- | ------------------- | --------------------------------------------- |
+| `02-decision-variables-options.xlsx`        | Simulator           | The decision variables and their options      |
 | `03-indicators.xlsx`                        | How the Model Works | What each consequence measures                |
 | `04-rules.xlsx`                             | How the Model Works | Effect, evidence, and weight for every option |
 | `05-interactions.xlsx`                      | How the Model Works | The pairs of decisions that change a result   |
@@ -261,20 +273,21 @@ The flow diagram on the How the Model Works page is `assets/diagrams/decisions-t
 
 ## Project structure
 
-| Path                                                                   | Purpose                                          |
-| ---------------------------------------------------------------------- | ------------------------------------------------ |
-| `index.html`, `simulator.html`, `how-it-works.html`, `references.html` | The four pages                                   |
-| `css/styles.css`                                                       | Design tokens and styles                         |
-| `js/site.js`                                                           | Navbar, footer, and team data                    |
-| `js/model-config.js`                                                   | The model used by the simulator                  |
-| `js/simulator.js`                                                      | Simulator interface and calculation engine       |
-| `js/tables.js`                                                         | Loads the Excel tables and renders them as HTML  |
-| `assets/tables/`                                                       | Excel source for every table                     |
-| `assets/vendor/`                                                       | SheetJS library that reads the Excel files       |
-| `docs/images/`                                                         | Screenshots used in this README                  |
-| `assets/diagrams/`                                                     | Diagram sources (`.drawio`) and exports (`.svg`) |
-| `assets/images/`                                                       | Photos                                           |
-| `PROMPT.md`                                                            | The prompt used to generate this site            |
+| Path                                                                   | Purpose                                                |
+| ---------------------------------------------------------------------- | ------------------------------------------------------ |
+| `index.html`, `simulator.html`, `how-it-works.html`, `references.html` | The four pages                                         |
+| `css/styles.css`                                                       | Design tokens and styles                               |
+| `js/site.js`                                                           | Navbar, footer, and team data                          |
+| `js/model-config.js`                                                   | A demo model used until the Excel tables are filled in |
+| `js/model-loader.js`                                                   | Builds the simulator model from the Excel tables       |
+| `js/simulator.js`                                                      | Simulator interface and calculation engine             |
+| `js/tables.js`                                                         | Loads the Excel tables and renders them as HTML        |
+| `assets/tables/`                                                       | Excel source for every table                           |
+| `assets/vendor/`                                                       | SheetJS library that reads the Excel files             |
+| `docs/images/`                                                         | Screenshots used in this README                        |
+| `assets/diagrams/`                                                     | Diagram sources (`.drawio`) and exports (`.svg`)       |
+| `assets/images/`                                                       | Photos                                                 |
+| `PROMPT.md`                                                            | The prompt used to generate this site                  |
 
 ## Disclaimer
 

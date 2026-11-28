@@ -196,12 +196,13 @@ td .pill { white-space: nowrap; }
 .placeholder, td em { color: var(--muted); font-style: italic; }
 td a { font-weight: 600; word-break: break-word; }
 /* Column widths for the model tables (the class comes from the .md file name). */
-.t-04-rules table, .t-05-interactions table { table-layout: fixed; min-width: 760px; }
-.t-04-rules th:nth-child(1) { width: 12%; }
-.t-04-rules th:nth-child(2) { width: 20%; }
-.t-04-rules th:nth-child(3) { width: 22%; }
-.t-04-rules th:nth-child(4) { width: 20%; }
-.t-04-rules th:nth-child(5), .t-04-rules th:nth-child(6) { width: 13%; }
+.t-04-rules table, .t-05-interactions table { table-layout: fixed; min-width: 900px; }
+.t-04-rules th:nth-child(1) { width: 11%; }
+.t-04-rules th:nth-child(2) { width: 15%; }
+.t-04-rules th:nth-child(3) { width: 19%; }
+.t-04-rules th:nth-child(4) { width: 17%; }
+.t-04-rules th:nth-child(5) { width: 14%; }
+.t-04-rules th:nth-child(6), .t-04-rules th:nth-child(7) { width: 12%; }
 .t-05-interactions th:nth-child(1) { width: 13%; }
 .t-05-interactions th:nth-child(2) { width: 24%; }
 .t-05-interactions th:nth-child(3) { width: 21%; }
@@ -315,3 +316,7 @@ td a { font-weight: 600; word-break: break-word; }
 
 .notes .note-box { margin: 0 0 1em; padding: 12px 18px; background: #fff8e8; border: 1px solid #f0dcaa; border-radius: 12px; color: #5b4510; font-size: .95rem; }
 .notes .note-box a { color: var(--teal-dark); }
+
+.notice[hidden] { display: none; }
+.notice ul { margin: 6px 0 0; padding-left: 1.2em; }
+.notice li { padding: 1px 0; }
