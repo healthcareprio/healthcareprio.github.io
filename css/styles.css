@@ -310,3 +310,5 @@ td a { font-weight: 600; word-break: break-word; }
 .toc li.sub a { padding-left: 28px; font-size: .86rem; }
 .notes h3 { scroll-margin-top: 92px; }
 @media (max-width: 900px) { .toc { max-height: none; overflow: visible; } }
+
+.notes .note-box { margin: 0 0 1em; padding: 12px 18px; background: var(--teal-tint); border: 1px solid #b9dcdf; border-radius: 12px; color: var(--ink); font-size: .95rem; }
