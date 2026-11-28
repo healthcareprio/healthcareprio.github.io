@@ -204,9 +204,9 @@ td a { font-weight: 600; word-break: break-word; }
 .t-interactions th:nth-child(2) { width: 24%; }
 .t-interactions th:nth-child(3) { width: 21%; }
 .t-interactions th:nth-child(4) { width: 42%; }
-.t-contributions table { table-layout: fixed; min-width: 0; }
-.t-contributions th:nth-child(1) { width: 33.333%; }
-.t-contributions th:nth-child(2) { width: 66.667%; }
+.t-42-references-contributions table { table-layout: fixed; min-width: 0; }
+.t-42-references-contributions th:nth-child(1) { width: 33.333%; }
+.t-42-references-contributions th:nth-child(2) { width: 66.667%; }
 .table-error { padding: 16px 18px; color: #a3392c; }
 .rule-list { margin: 0 0 1em; padding-left: 22px; color: var(--ink-soft); font-size: 1.05rem; }
 .rule-list b { color: var(--teal-dark); }

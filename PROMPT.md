@@ -124,7 +124,7 @@ oindex. It has a sticky on-this-page list, and its tables are Excel files named 
 
 **No table may be written inline in an HTML file.** Every static table is an Excel file in `assets/tables/` so teammates can edit it in Excel and upload it to GitHub without touching HTML:
 
-`indicators.xlsx`, `rules.xlsx`, `interactions.xlsx`, `online-references.xlsx`, `ai-use.xlsx`, `contributions.xlsx`, `design-inspiration.xlsx`
+`indicators.xlsx`, `rules.xlsx`, `interactions.xlsx`, `40-references-online-references.xlsx`, `41-references-declaraions-of-ai-use.xlsx`, `42-references-contributions.xlsx`, `43-references-design-inspiration.xlsx`
 
 - In a page, a table is a container such as `<div data-table="assets/tables/rules.xlsx"></div>`.
 - `js/tables.js` fetches each file (with `cache: "no-cache"`), reads the first sheet with SheetJS (row 1 is the header), and renders an HTML table inside a scrolling `.table-wrap`. The file name becomes a CSS class (`t-rules`) for column widths.
